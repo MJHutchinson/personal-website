@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Nelson Bighetti
+name: Michael Hutchinson
 
 # Username (this should match the folder name)
 authors:
@@ -10,32 +10,34 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Phd Student in Statistical Machine Learning at the University of Oxford
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
+- name: Statistics Department, University of Oxford
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: PhD student interested in the interface between Statistics and Machine Learning, in particular uncertainly in prediction and decision making.
 
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Bayesian Machine Learning
+- Machine Learning with Guarantees
+- Climbing and Hockey
+- Reading Fiction and Philosophy
+- Making a positive difference in the world!
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: PhD in Statistical Machine Learning
+    institution: University College, University of Oxford
+    year: 2019-2023
+  - course: MEng in Information and Computer Engineering
+    institution: Christs College, University of Cambridge
+    year: 2018-2019
+  - course: BA in Engineering
+    institution: Christs College, University of Cambridge
+    year: 2015-2018
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
@@ -44,16 +46,16 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: mailto:hutchinson.michael.john@gmail.com
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/MHutchinson141
+#- icon: google-scholar
+#  icon_pack: ai
+#  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/gc
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
@@ -70,6 +72,12 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Hi I'm Michael! I'm interested in machine learning, particularly the Bayesian flavour.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+Recently I've worked on Architecture Search of Bayesian Neural Networks, and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/project/2019-10-01-differentially-private-pvi" >}}).
+
+Broadly I'm interested in statistically principled machine learning. I'm working on pushing the theoretical boundaries of this, and help make it useful in the real world! Things that I think are interesting currently include approximate inference for large models (such as variational inference), validation methods for these approximations (such as uncertainty quantification), and generative modelling. 
+
+My interests aren't completely settled however, and I'm always keen to explore new areas. Reinforcement Learning is the next on my todo list.
+
+I recently started a PhD course at the University of Oxford through the [StatML](https://statml.io/) course, supervised by [Yee Whye Teh](http://www.stats.ox.ac.uk/~teh/). Before that I completed a Masters of Engineering at the University of Cambridge, supervised by [Dr Rich E. Turner](http://cbl.eng.cam.ac.uk/Public/Turner/Turner).
