@@ -18,11 +18,11 @@ day_night = true
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in font sets in `themes/academic/data/fonts/`
 #   Browse user installed font sets in `data/fonts/`
-font = ""
+font = "Minimal"
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
-font_size = "L"
+font_size = "M"
 
 ############################
 ## Basic Info
@@ -110,7 +110,7 @@ appointment_url = ""
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "My Twitter", link = "https://twitter.com/MHutchinson141"},
-  {icon = "skype", icon_pack = "fab", name = "My Skype", link = "skype:hutchinson.michael.john@gmial.com?call"},
+  {icon = "skype", icon_pack = "fab", name = "My Skype", link = "skype:hutchinson.michael.john@gmail.com?call"},
   {icon = "linkedin", icon_pack = "fab", name = "My Linkedin", link = "https://linkedin.com/MJHutchinson"},
   # {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},

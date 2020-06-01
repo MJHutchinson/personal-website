@@ -74,7 +74,7 @@ user_groups:
 
 Hi I'm Michael! I'm interested in machine learning, particularly the Bayesian flavour.
 
-Recently I've worked on Architecture Search of Bayesian Neural Networks, and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/project/2019-10-01-differentially-private-pvi" >}}).
+Recently I've worked on Architecture Search of Bayesian Neural Networks, and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/post/2019-10-01-differentially-private-pvi" >}}).
 
 Broadly I'm interested in statistically principled machine learning. I'm working on pushing the theoretical boundaries of this, and help make it useful in the real world! Things that I think are interesting currently include approximate inference for large models (such as variational inference), validation methods for these approximations (such as uncertainty quantification), and generative modelling. 
 
