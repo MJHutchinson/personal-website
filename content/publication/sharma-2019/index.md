@@ -8,7 +8,8 @@ abstract: "In many real-world applications of machine learning, data are distrib
 featured: True
 publication: "[Privacy in Machine Learning Workshop, Advances in Neural Information Processing Systems 2019](https://priml-workshop.github.io/priml2019/)"
 publication_short: "_**NeurIPS 2019**, PriML Workshop_"
-url_pdf: "http://arxiv.org/abs/1911.10563"
+external_link: "https://arxiv.org/abs/1911.10563"
+url_pdf: "https://arxiv.org/pdf/1911.10563.pdf"
 url_code: "https://github.com/MrinankSharma/DP-PVI"
 url_project: "/project/2019-10-01-differentially-private-pvi/"
 url_poster: "files/DP_PVI_Poster.pdf"
