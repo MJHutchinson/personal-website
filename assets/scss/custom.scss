@@ -1,0 +1,48 @@
+// Override this file to add your own SCSS styling.
+
+// Custom for publications page
+.citation-list-title {
+    font-size: 1.0rem;
+}
+
+.citation-list-title a {
+    color: #151515;
+    transition: color 0.6s ease;
+}
+
+.dark .citation-list-title {
+    color: rgba(255,255,255,0.54);
+}
+
+.dark .citation-list-title a {
+    color: rgba(255,255,255,0.54);
+}
+  
+// Fix night mode nav bar
+.dark .navbar {
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 255, 255, 0.11);
+    background: #282a36;
+}
+
+.dark .nav-link {
+    color: rgba(255,255,255,0.54);
+}
+
+.dark .navbar-brand {
+    color: rgba(255,255,255,0.54);
+}
+
+
+.dark #navbar-main .main-menu-item ul li .nav-link {
+    color: rgba(255,255,255,0.54);
+}
+
+// remove some home section padding
+.home-section{
+    padding: 50px 0 20px 0;
+}
+
+
+h3{
+    font-weight: 400;
+}
