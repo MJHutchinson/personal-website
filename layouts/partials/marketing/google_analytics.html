@@ -1,0 +1,16 @@
+{{ $ga := site.Params.marketing.google_analytics | default site.GoogleAnalytics | default "" }}
+{{ $gtm := site.Params.marketing.google_tag_manager | default "" }}
+
+{{ if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") | and $ga | and (not $gtm) }}
+
+{{ $gtag_config := cond site.Params.privacy_pack "{ 'anonymize_ip': true }" "{}" }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168430963-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168430963-1');
+</script>
+{{ end }}
