@@ -12,6 +12,6 @@ external_link: "https://arxiv.org/abs/1911.10563"
 url_pdf: "https://arxiv.org/pdf/1911.10563.pdf"
 url_code: "https://github.com/MrinankSharma/DP-PVI"
 url_project: "/project/2019-10-01-differentially-private-pvi/"
-url_poster: "files/DP_PVI_Poster.pdf"
+url_poster: "files/dp-pvi/DP_PVI_Poster.pdf"
 ---
 
