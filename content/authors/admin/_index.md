@@ -74,10 +74,12 @@ user_groups:
 
 Hi I'm Michael! I'm interested in machine learning, particularly the Bayesian flavour.
 
-Recently I've worked on Architecture Search of Bayesian Neural Networks, and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/post/2019-10-01-differentially-private-pvi" >}}).
+Recently I have been working on Equivariance in Deep Learning, and various [COIVD-19 statistical modelling efforts]({{< relref "#publications" >}}). 
 
-Broadly I'm interested in statistically principled machine learning. I'm working on pushing the theoretical boundaries of this, and help make it useful in the real world! Things that I think are interesting currently include approximate inference for large models (such as variational inference), validation methods for these approximations (such as uncertainty quantification), and generative modelling. 
+Previously I've worked on Architecture Search of Bayesian Neural Networks, and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/post/2019-10-01-differentially-private-pvi" >}}).
+
+Broadly I'm interested in statistically principled machine learning. I'm working on pushing the theoretical boundaries of this, and help make it useful in the real world!
 
 My interests aren't completely settled however, and I'm always keen to explore new areas. Reinforcement Learning is the next on my todo list.
 
-I recently started a PhD course at the University of Oxford through the [StatML](https://statml.io/) course, supervised by [Yee Whye Teh](http://www.stats.ox.ac.uk/~teh/). Before that I completed a Masters of Engineering at the University of Cambridge, supervised by [Dr Rich E. Turner](http://cbl.eng.cam.ac.uk/Public/Turner/Turner).
+I recently started a PhD course at the University of Oxford through the [StatML](https://statml.io/) course, supervised by [Yee Whye Teh](http://www.stats.ox.ac.uk/~teh/) and [Max Welling](https://staff.fnwi.uva.nl/m.welling/). Before that I completed a Masters of Engineering at the University of Cambridge, supervised by [Dr Rich E. Turner](http://cbl.eng.cam.ac.uk/Public/Turner/Turner).
