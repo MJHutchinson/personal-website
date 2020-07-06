@@ -11,5 +11,10 @@ url_pdf: "https://rs-delve.github.io/pdfs/2020-05-27-effectiveness-and-resource-
 url_code: "https://github.com/rs-delve/tti-explorer"
 url_project: "https://rs-delve.github.io/reports/2020/05/27/test-trace-isolate.html"
 external_link: "https://rs-delve.github.io/reports/2020/05/27/test-trace-isolate.html"
+
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: true
 ---
 
