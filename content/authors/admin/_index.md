@@ -74,9 +74,9 @@ user_groups:
 
 Hi I'm Michael! I'm interested in machine learning, particularly the Bayesian flavour.
 
-Recently I have been working on Equivariance in Deep Learning, and various [COIVD-19 statistical modelling efforts]({{< relref "#publications" >}}). 
+Recently I have been working on [Equivariance in Deep Learning](#publications), and various [COIVD-19 statistical modelling efforts](#publications). 
 
-Previously I've worked on Architecture Search of Bayesian Neural Networks, and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/post/2019-10-01-differentially-private-pvi" >}}).
+Previously I've worked on [Architecture Search of Bayesian Neural Networks](https://github.com/MJHutchinson/Masters-Thesis/raw/master/Final%20report%20v2.pdf), and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/post/2019-10-01-differentially-private-pvi" >}}).
 
 Broadly I'm interested in statistically principled machine learning. I'm working on pushing the theoretical boundaries of this, and help make it useful in the real world!
 
