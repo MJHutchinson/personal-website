@@ -18,14 +18,13 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: PhD student interested in the interface between Statistics and Machine Learning, in particular uncertainly in prediction and decision making.
+bio: PhD student interested in the interface between Statistics and Machine Learning, in particular Geometric learning, and well calibrated uncertainties.
 
 interests:
+- Geometric Learning
 - Bayesian Machine Learning
-- Machine Learning with Guarantees
-- Climbing and Hockey
+- Climbing, Hockey, Rowing
 - Reading Fiction and Philosophy
-- Making a positive difference in the world!
 
 education:
   courses:
@@ -74,12 +73,10 @@ user_groups:
 
 Hi I'm Michael! I'm interested in machine learning, particularly the Bayesian flavour.
 
-Recently I have been working on [Equivariance in Deep Learning](#publications), and various [COIVD-19 statistical modelling efforts](#publications). 
+Recently I have been working on [Geometric and Equivariant Deep/Probabilistic Learning](#publications), and various [COIVD-19 statistical modelling efforts](#publications).
 
 Previously I've worked on [Architecture Search of Bayesian Neural Networks](https://github.com/MJHutchinson/Masters-Thesis/raw/master/Final%20report%20v2.pdf), and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/post/2019-10-01-differentially-private-pvi" >}}).
 
-Broadly I'm interested in statistically principled machine learning. I'm working on pushing the theoretical boundaries of this, and help make it useful in the real world!
+Broadly I'm interested in interface between statistical and deep learning, and trying to bring more principled statistical methods into deep learning.
 
-My interests aren't completely settled however, and I'm always keen to explore new areas. Reinforcement Learning is the next on my todo list.
-
-I recently started a PhD course at the University of Oxford through the [StatML](https://statml.io/) course, supervised by [Yee Whye Teh](http://www.stats.ox.ac.uk/~teh/) and [Max Welling](https://staff.fnwi.uva.nl/m.welling/). Before that I completed a Masters of Engineering at the University of Cambridge, supervised by [Dr Rich E. Turner](http://cbl.eng.cam.ac.uk/Public/Turner/Turner).
+I am currently a PhD student at the University of Oxford through the [StatML](https://statml.io/) course, supervised by [Yee Whye Teh](http://www.stats.ox.ac.uk/~teh/) and [Max Welling](https://staff.fnwi.uva.nl/m.welling/). Before that I completed a Masters of Engineering at the University of Cambridge, supervised by [Dr Rich E. Turner](http://cbl.eng.cam.ac.uk/Public/Turner/Turner).
