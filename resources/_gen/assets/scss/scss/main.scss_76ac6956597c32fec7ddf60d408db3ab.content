@@ -7848,7 +7848,7 @@ article {
       max-width: 690px; } }
   @media (min-width: 992px) {
     .article-container {
-      max-width: 930; } }
+      max-width: 930px; } }
   @media (min-width: 1200px) {
     .article-container {
       max-width: 1110px; } }
