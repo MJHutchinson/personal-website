@@ -8,13 +8,13 @@ abstract: "Score-based generative models (SGMs) are a powerful class of generati
 featured: true
 publication: "_**Outstanding Paper Award**, Neurips 2022_"
 
-# url_pdf: "https://arxiv.org/abs/2202.02763"
-url_pdf: "files/rsgm/paper.pdf"
+url_pdf: "https://arxiv.org/abs/2202.02763"
+# url_pdf: "files/rsgm/paper.pdf"
 url_code: "https://github.com/oxcsml/riemannian-score-sde"
 url_poster: "files/rsgm/poster.pdf"
-# url_talk: "https://www.youtube.com/watch?v=mbDabDd8Dxg"
+url_talk: "https://nips.cc/virtual/2022/poster/54590"
 # url_slides: "https://docs.google.com/presentation/d/1gZ8li3dJymo-sRVnFCxxJDRxKQoH5GumzflN8Cg82DE/edit?usp=sharing"
-# external_link: 
+external_link: https://nips.cc/virtual/2022/poster/54590
 
 image:
   caption: ""

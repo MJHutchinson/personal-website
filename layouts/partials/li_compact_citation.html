@@ -59,7 +59,7 @@
         {{ partial "page_metadata" (dict "page" $item "is_list" 1) }}
       {{ end }}
 
-      <div class="mt-2">
+      <div class="mt-0">
         {{ if .Params.publication_short }}
         {{- .Params.publication_short | markdownify -}}.
         {{ else if .Params.publication }}
@@ -68,13 +68,11 @@
       </div>
       
     </div>
-
     <!-- {{ with $summary }}
     <div class="article-style">
       {{ . | truncate 135 }}
     </div>
     {{ end }} -->
-
     {{ if $show_buttons }}
     <div class="btn-links">
       {{ partial "page_links" (dict "page" $item "is_list" 1) }}
