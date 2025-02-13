@@ -1,0 +1,2 @@
+RewriteEngine On
+Redirect /nvidia /presentations/geometry-in-score-based-modelling/talk.html

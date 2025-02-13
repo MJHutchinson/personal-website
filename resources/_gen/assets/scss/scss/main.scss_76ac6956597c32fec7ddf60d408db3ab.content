@@ -7027,7 +7027,9 @@ p {
   margin-bottom: 1rem; }
 
 /* Lists */
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin-top: 0;
   margin-bottom: 1rem; }
 
@@ -7042,7 +7044,12 @@ ul.task-list {
   text-rendering: optimizeLegibility; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Raleway, sans-serif;
   font-weight: 400;
   margin-top: 1rem;
@@ -7071,7 +7078,9 @@ h3 {
   margin-top: 1.5rem;
   font-size: 1.25rem; }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-weight: 700;
   margin-top: 1rem;
   font-size: 1rem; }
@@ -7336,7 +7345,7 @@ a.badge:hover {
   border-radius: .3rem; }
 
 .btn-links .btn {
-  padding: 5px .5rem 5px .5rem;
+  padding: 5px .2rem 5px .2rem;
   line-height: 1; }
 
 .btn.btn-sm, .btn-group-sm > .btn {

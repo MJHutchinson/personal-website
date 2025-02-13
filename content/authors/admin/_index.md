@@ -71,12 +71,13 @@ user_groups:
 - Visitors
 ---
 
-Hi I'm Michael! I'm interested in machine learning, particularly the Bayesian flavour.
+Hi I'm Michael! I'm interested in all things Machine Learning!
 
-Recently I have been working on [Geometric and Equivariant Deep/Probabilistic Learning](#publications), and various [COIVD-19 statistical modelling efforts](#publications).
+I am currently a PhD student at the University of Oxford through the [StatML](https://statml.io/) course, supervised by [Yee Whye Teh](http://www.stats.ox.ac.uk/~teh/) and [Max Welling](https://staff.fnwi.uva.nl/m.welling/). Before that I completed a Masters of Engineering at the University of Cambridge, supervised by [Dr Rich E. Turner](http://cbl.eng.cam.ac.uk/Public/Turner/Turner).
 
-Previously I've worked on [Architecture Search of Bayesian Neural Networks](https://github.com/MJHutchinson/Masters-Thesis/raw/master/Final%20report%20v2.pdf), and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/post/2019-10-01-differentially-private-pvi" >}}).
+Recently I have been working on two main topics: [Diffusion models and related topics](#publications) and  [Geometric and Equivariant Deep/Probabilistic Learning](#publications)
+
+Previously I've worked on [COVID-19 statistical modeling efforts](publication/teh-2021-efficient), [Federated Learning](publication/hutchinson-2021-federated), [Architecture Search of Bayesian Neural Networks](https://github.com/MJHutchinson/Masters-Thesis/raw/master/Final%20report%20v2.pdf), and [Differential Privacy for Federated and Continual Bayesian Learning]({{< ref "/post/2019-10-01-differentially-private-pvi" >}}).
 
 Broadly I'm interested in interface between statistical and deep learning, and trying to bring more principled statistical methods into deep learning.
 
-I am currently a PhD student at the University of Oxford through the [StatML](https://statml.io/) course, supervised by [Yee Whye Teh](http://www.stats.ox.ac.uk/~teh/) and [Max Welling](https://staff.fnwi.uva.nl/m.welling/). Before that I completed a Masters of Engineering at the University of Cambridge, supervised by [Dr Rich E. Turner](http://cbl.eng.cam.ac.uk/Public/Turner/Turner).

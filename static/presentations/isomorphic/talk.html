@@ -1,0 +1,2434 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/libertinus.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <!-- <link rel="stylesheet" href="plugin/highlight/monokai.css"> -->
+
+    <!-- Custom css from alex -->
+    <link rel="stylesheet" href="dist/utility.css">
+</head>
+
+<body class="reveal-viewport" style="--slide-width: 1280px; --slide-height: 800px;">
+    <div class="reveal">
+        <div class="slides">
+            <section class="h-100" data-auto-animate="" style="display: block;" data-fragment="-1">
+                <article class="justify-between h-100">
+                    <div class="r-hstack justify-between items-start w-100 pt-5 fragment fade-out"
+                        data-fragment-index="0">
+                        <h2 class="h5">Talk at Isomorphic Labs</h2>
+                    </div>
+                    <div class="r-vstack w-100 h3">
+                        <h1 class="text-nowrap my-0">Geometry</h1>
+                        <h1 class="text-nowrap my-0">in</h1>
+                        <div class="r-hstack">
+                            <h1 class="text-nowrap my-0">Score-Based</h1>
+                            <h1 class="text-nowrap my-0">&nbsp;</h1>
+                            <h1 class="text-nowrap my-0">Generative
+                                Modelling</h1>
+                        </div>
+                    </div>
+                    <div style="opacity: 40%;">Follow along at <a>mjhutchinson.info/iso</a></div>
+                    <div class="r-hstack justify-between items-center w-100 fragment fade-out" data-fragment-index="0">
+                        <div><img src="figures/oxweb-logo-rect.svg"></div>
+                        <div class="r-vstack items-end">
+                            <h3 class="my-0 text-center">Michael Hutchinson</h3>
+                            <h3 class="my-0 text-small-caps"><a href="https://mjhutchinson.info">mjhutchinson.info</a>
+                            </h3>
+                            <h3 class="my-0 text-small-caps"><a href="https://twitter.com/MHutchinson141"><span
+                                        class="twitter"></span> @mhutchinson141</a></h3>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="h-100" data-auto-animate="" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>A Bit About Me</h1>
+                </div>
+
+                <div class="canvas-box">
+                    <div class="canvas-item fragment" data-fragment-index="1" style="width: 142px; left: 100px">
+                        <div class="r-vstack">
+                            <h5 class="small">Bayesian Neural Networks</h5>
+                            <div class=" r-hstack">
+                                <img class="img-fluid my-0" src="figures/icons/bnns.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="canvas-item fragment" data-fragment-index="2" style="width: 142px; left: 300px">
+                        <div class="r-vstack">
+                            <h5 class="small">Federated Learning</h5>
+                            <div class="r-hstack">
+                                <img class="img-fluid my-0" src="figures/icons/fedl.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="canvas-item fragment" data-fragment-index="10" style="width: 426px; left: 800px">
+                        <div class="r-vstack">
+                            <h5 class="small">Epidemiology</h5>
+                            <div class="columns">
+                                <img class="column img-fluid my-0" src="figures/icons/covid.jpg">
+                                <img class="column img-fluid my-0" src="figures/icons/delve.png">
+                                <img class="column img-fluid my-0" src="figures/icons/turing.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="canvas-item" style="width: 1280px; left: 100; top: 270px">
+                        <div class="r-vstack">
+                            <h5 class=" fragment" data-fragment-index="3">Geometric Machine Learning</h5>
+                            <div class="columns">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="4"
+                                    src="figures/icons/liet.png">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="5"
+                                    src="figures/icons/gcnp.png">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="6"
+                                    src="figures/icons/kern.png">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="7"
+                                    src="figures/icons/uva.png">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="7"
+                                    src="figures/icons/dmlg.png">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="8"
+                                    src="figures/sphere_w_dist.png" data-id="sphere">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="8"
+                                    src="figures/manifold_w_boundary.png">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="8"
+                                    src="figures/manifold_w_boundary_better.png">
+                                <img class="column img-fluid my-0 fragment" data-fragment-index="8"
+                                    src="figures/geometric_ndp.png">
+                            </div>
+                            <div class="r-hstack">
+                                <h5 class="small fragment" data-fragment-index="4" style="rotate: 45deg; width: 142px">
+                                    <nobr>Transformers</nobr>
+                                </h5>
+                                <h5 class="small fragment" data-fragment-index="5" style="rotate: 45deg; width: 142px;">
+                                    Neural Processes</h5>
+                                <h5 class="small fragment" data-fragment-index="6" style="rotate: 45deg; width: 142px;">
+                                    Gaussian Processes</h5>
+                                <h5 class="small mt-n4 fragment" data-fragment-index="7" style="width: 284px">Scientific
+                                    Applications</h5>
+                                <h5 class="small mt-n4 fragment" data-fragment-index="8" style="width: 568px">
+                                    ------------- Diffusion
+                                    Modelling -------------</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canvas-item fragment" data-fragment-index="9"
+                        style="width: 142px; top:560px; left: 930px"> <img class="column img-fluid my-0"
+                            src="figures/icons/sndp.png">
+                    </div>
+                </div>
+
+                <!-- <ul>
+                    <li>Bayesian neural networks</li>
+                    <li>Federated Learning</li>
+                    <li>Equivariant Machine Learning</li>
+                    <li>Generative Modelling & Neural Processes</li>
+                    <li>Gaussian Processes</li>
+                    <li>AI4Science</li>
+                    <li>Diffusion Models</li>
+                </ul> -->
+            </section>
+
+
+            <section class="h-100" data-auto-animate="" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>Geometry & Score-Based Modelling - A Line of Work</h1>
+                </div>
+                <article>
+                    <div class="r-vstack w-100">
+                        <div class="r-hstack w-100 items-start">
+                            <div class="r-vstack w-25">
+                                <!-- <img class="img-fluid w-75 mb-n3 mt-n4" src="figures/sphere_w_dist.png"> -->
+                                <div class="w-75 mb-n3 mt-n4">
+                                    <img class="column img-fluid my-0" data-fragment-index="8" data-id="sphere"
+                                        src="figures/sphere_w_dist.png">
+                                </div>
+                                <h2 class="my-0 small">
+                                    <div data-id="title">Manifolds</div>
+                                </h2>
+                                <h3 class="my-0 footnotesize">
+                                    <div data-id="conf">Neurips 2022</div>
+                                </h3>
+                            </div>
+                            <div class="r-vstack w-25">
+                            </div>
+                            <div class="r-vstack w-25">
+                                <img class="img-fluid" style="width: 65%" src="figures/manifold_w_boundary_better.png">
+                                <h2 class="my-0 small text-nowrap"><em>Better</em> Manifolds with Boundary</h2>
+                                <h3 class="my-0 footnotesize">Arxiv 2023</h3>
+                            </div>
+                            <div class="r-vstack w-25">
+                            </div>
+                        </div>
+                        <img class="img-fluid w-100 mt-3 mb-1" style="max-width: 100% !important;"
+                            src="figures/timeline.svg">
+                        <div class="r-hstack w-100 items-start">
+                            <div class="r-vstack w-25">
+                            </div>
+                            <div class="r-vstack w-25">
+                                <img class="img-fluid" style="width: 65%" src="figures/manifold_w_boundary.png">
+                                <h2 class="my-0 small text-nowrap">Manifolds with Boundary</h2>
+                                <h3 class="my-0 footnotesize">TMLR 2023</h3>
+                            </div>
+                            <div class="r-vstack w-25">
+                            </div>
+                            <div class="r-vstack w-25">
+                                <div class="r-hstack w-100">
+                                    <img class="img-fluid w-50" src="figures/geometric_ndp.png">
+                                    <div class="mx-3" style="color: #002147;">&</div>
+                                    <img class="img-fluid w-50" src="figures/field.svg">
+                                </div>
+                                <h2 class="my-0 small text-nowrap">Fields and Paths on Manifolds</h2>
+                                <h3 class="my-0 footnotesize">Arxiv 2023</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-stretch r-vstack items-center w-100">
+                    <div class="r-vstack w-100">
+                        <div class="r-hstack w-100">
+                            <img class="img-fluid w-25 mb-n3 mt-n4" src="figures/torus_w_dist.png">
+
+                            <img class="img-fluid w-25 mb-n3 mt-n4" src="figures/sphere_w_dist.png">
+                            <img class="img-fluid w-25 mb-n3 mt-n4" src="figures/hyperbolic_w_dist.png">
+
+                        </div>
+                        <h1>
+                            <div data-id="title">Riemannian Score-Based Generative Modelling</div>
+                        </h1>
+                        <h3 class="my-0 footnotesize">
+                            <div data-id="conf">Outstanding Paper Award, Neurips 2022</div>
+                        </h3>
+                    </div>
+                    <div class="r-hstack mt-4 w-75 items-start">
+                        <div class="r-vstack mx-1" style="width: 16% !important;">
+                            <img class="img-fluid face-circle" src="figures/faces/debortoli.jpg" style="height">
+                            <h5 class="footnotesize my-0">Valentin<br>De Bortoli*</h5>
+                        </div>
+                        <div class="r-vstack mx-1" style="width: 16% !important;">
+                            <img class="img-fluid face-circle" src="figures/faces/mathieu2.jpg" style="height">
+                            <h5 class="footnotesize my-0">Émile<br>Mathieu*</h5>
+                        </div>
+                        <div class="r-vstack mx-1" style="width: 16% !important;">
+                            <img class="img-fluid face-circle" src="figures/faces/hutchinson.jpg" style="height">
+                            <h5 class="footnotesize my-0">Michael<br>Hutchinson*</h5>
+                        </div>
+                        <div class="r-vstack mx-1" style="width: 16% !important;">
+                            <img class="img-fluid face-circle" src="figures/faces/thornton.jpg" style="height">
+                            <h5 class="footnotesize my-0">James<br>Thornton</h5>
+                        </div>
+                        <div class="r-vstack mx-1" style="width: 16% !important;">
+                            <img class="img-fluid face-circle" src="figures/faces/teh.png" style="height">
+                            <h5 class="footnotesize my-0">Yee Whye<br>Teh</h5>
+                        </div>
+                        <div class="r-vstack mx-1" style="width: 16% !important;">
+                            <img class="img-fluid face-circle" src="figures/faces/doucet.jpg" style="height">
+                            <h5 class="footnotesize my-0">Arnaud<br>Doucet</h5>
+                        </div>
+                    </div>
+                    <div class="scriptsize mt-4 p-div" style="opacity: 50%;">*equal contribution</div>
+                </div>
+            </section>
+
+            <section class=" h-100" data-auto-animate="" hidden="" aria-hidden="true" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>Geometry</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">in</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">Score-Based</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">Generative
+                        Modelling</h1>
+                </div>
+                <div class="r-vstack">
+                    <p class="fragment fade-in">What do I mean by geometry in this context?</p>
+                    <div class="columns">
+                        <div class="column fragment fade-in">
+                            <div class="w-100 items-center">
+                                <h5>Euclidean space</h5>
+                            </div>
+                            <!-- <img src="figures/torus_w_dist.png"> -->
+                        </div>
+                        <div class="column fragment fade-in">
+                            <div class="w-100 items-center">
+                                <h5>Torus</h5>
+                            </div>
+                            <img src="figures/torus_w_dist.png">
+                        </div>
+                        <div class="column fragment fade-in">
+                            <div class="w-100 items-center">
+                                <h5>Sphere</h5>
+                            </div>
+                            <img src="figures/sphere_w_dist.png">
+                        </div>
+                        <div class="column fragment fade-in">
+                            <div class="w-100 items-center">
+                                <h5>Hyperbolic space</h5>
+                            </div>
+                            <img src="figures/hyperbolic_w_dist.png">
+                        </div>
+                    </div>
+                    <p class="fragment fade-in mb-0">Locally: manifolds look Euclidean (flat); Globally: they look very
+                        different</p>
+                    <p class="fragment fade-in">Many common concepts are different in non-Euclidean space!</p>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">Geometry</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">in</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">Score-Based</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Generative
+                        Modelling</h1>
+                </div>
+                <div class="r-vstack r-stretch">
+                    <div class="columns h-50 w-100">
+                        <div class="column fragment">
+                            <div class="r-vstack h-100">
+                                <img class="my-0" src="figures/molecule.png">
+                                <p class="text-center mt-0 small">Molecules</p>
+                            </div>
+                        </div>
+                        <div class="column fragment">
+                            <div class="r-vstack h-100">
+                                <img class="my-0" src="figures/protein_binding.png">
+                                <p class="text-center mt-0 small">Proteins</p>
+                            </div>
+                        </div>
+                        <div class="column fragment">
+                            <div class="r-vstack h-100">
+                                <img class="my-0" src="figures/weather.png">
+                                <p class="text-center mt-0 small">Climate data</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns h-50 w-100">
+                        <div class="column fragment">
+                            <div class="r-vstack h-100">
+                                <img class="my-0" src="figures/robot.png">
+                                <p class="text-center mt-0 small">Robotics</p>
+                            </div>
+                        </div>
+                        <div class="column fragment">
+                            <div class="r-vstack h-100">
+                                <img class="my-0" src="figures/liegroups.png">
+                                <p class="text-center mt-0 small">Lie groups</p>
+                            </div>
+                        </div>
+                        <div class="column fragment">
+                            <div class="r-vstack h-100">
+                                <img class="my-0" src="figures/tree.png">
+                                <p class="text-center mt-0 small">Trees</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="dull">Geometry</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">in</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">Score-Based</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Generative
+                        Modelling</h1>
+                </div>
+                <div class="r-stretch columns items-start">
+                    <div class="column mr-4 items-start justify-start r-vstack">
+                        <h5 style="font-weight: bold;" class="fragment fade-in">Likelihood based models</h5>
+                        <ul class="fragment fade-in">
+                            <li>VAEs</li>
+                            <li>Normalizing flows</li>
+                            <li>Autoregressive models</li>
+                            <li>Energy based models</li>
+                        </ul>
+                        <p class="fragment fade-in">These typically have restricted forms on the models, or are trained
+                            via surrogate
+                            ELBOs.
+                        </p>
+                    </div>
+                    <div class="column ml-4 items-start justify-start r-vstack">
+                        <h5 style="font-weight: bold;" class="fragment fade-in">Implicit models</h5>
+                        <ul class="fragment fade-in">
+                            <li>GANs</li>
+                        </ul>
+                        <p class="fragment fade-in">The adversarial losses of these models can be very tricky to train,
+                            and we
+                            have no access
+                            to
+                            likelihoods from the models.</p>
+                    </div>
+                </div>
+                <div class="r-vstack mb-5">
+                    <p class="fragment fade-in">What benefit do score based models bring?</p>
+                    <ul>
+                        <li class="fragment fade-in">Very fast training &rarr; Much faster than normalsing flows
+                            &#128077</li>
+                        <li class="fragment fade-in">Stationary, regression, objective &rarr; Much more stable than
+                            GANs to train &#128077
+                        </li>
+                        <li class="fragment fade-in">Empirically exceptional results with minimal tricks &#128077</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="dull">Geometry</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">in</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Score-Based</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Generative
+                        Modelling</h1>
+                </div>
+                <p class="mb-0">How do score-based generative models work?</p>
+                <div class="r-vstack r-stretch items-center">
+                    <table style='border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;'>
+                        <tr class="no-border fragment fade-in">
+                            <td class="no-border" style="vertical-align: middle;">
+                                <p style="vertical-align: middle;">A forward process...</p>
+                            </td>
+                            <td class="no-border">
+                                <img class="my-0" src=" figures/perturb_vp.gif">
+                            </td>
+                        </tr>
+                        <tr class="no-border fragment fade-in">
+                            <td class=" no-border" style="vertical-align: middle;">
+                                <p>...which we then reverse</p>
+                            </td>
+                            <td class="no-border" style="vertical-align: middle;">
+                                <img class="my-0" src="figures/denoise_vp.gif">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="w-100 scriptsize" style="opacity: 50%;">
+                                    GIFs reproduced from <a
+                                        href="https://yang-song.net/blog/2021/score/">https://yang-song.net/blog/2021/score/</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5 mb-0">
+                    <h1 class="dull">Geometry</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">in</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Score-Based</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Generative
+                        Modelling</h1>
+                </div>
+                <div class="r-vstack r-stretch items-start">
+                    <p class="fragment">The forward noising process is a <em>Stochastic differential equation
+                            (SDE)</em></p>
+                    <div class="w-100 fragment">\(\d\X = \drift\d t + \noise \brownian \)
+                    </div>
+                    <p class="fragment">Typical
+                        score matching uses the <em>Ornstein-Uhlenbeck</em> process:</p>
+                    <div class="w-100 r-hstack fragment"><span>\( \d\X = -\textcolor{blue}{\X}\d t + \langnoise
+                            \brownian \)
+                        </span><span class="fragment fade-right" style="transition: all 1.5s ease;">\(\quad
+                            \xrightarrow[t\to \infty]{\text{converges
+                            to}}\quad
+                            \c{N}(0, \operatorname{Id})\)</span></div>
+                    <p class="fragment">The reverse can be proved to be defined by:</p>
+                    <div class="w-100 fragment">
+                        \( \d \Y = \sbr{\driftrev + \noiserev^2 \scorerev}\d t + \noiserev \brownian \)
+                    </div>
+                    <p class="mb-0 fragment">Where \( p_t(\m{X})\) is the evolved density of the SDE at time \(t\).</p>
+                    <div class="r-hstack p-div fragment fade-right" style="transition: all 1.5s ease;">
+                        \(\longrightarrow\)&nbsp;our deep learning challenge
+                        is&nbsp;<em>learning the
+                            score</em>,&nbsp;<div>\(\score\)</div>
+                        .
+                    </div>
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5 mb-0">
+                    <h1 class="dull">Geometry</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">in</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Score-Based</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Generative
+                        Modelling</h1>
+                </div>
+                <p class="mt-0">How do score-based generative models work?</p>
+                <div class="r-vstack r-stretch items-start">
+                    <p class="mb-2 fragment">The forward noising process is a <em>Stochastic differential equation
+                            (SDE)</em></p>
+                    <div class="w-100 fragment">\(\d\X = \drift\d t + \noise \brownian \)
+                    </div>
+                    <p class="mt-2 mb-2 fragment">which should in the limit \(t \to \infty\) converge to a stable
+                        analytic
+                        distribution. Typical
+                        score matching uses the <em>Ornstein-Uhlenbeck</em> process:</p>
+                    <div class="w-100 fragment">\(\d\X = -\textcolor{blue}{\X}\d t + \langnoise \brownian\)
+                    </div>
+                    <p class="mb-2 mt-0 fragment">which converges to a Gaussian. <span style="opacity: 20%;">Other
+                            options
+                            exist.</span></p>
+                    <p class="mt-0 fragment">The reverse can be proved to be defined by:</p>
+                    <div class="w-100 fragment">
+                        \( \d \Y = \sbr{\driftrev + \noiserev^2 \scorerev}\d t + \noiserev \brownian \)
+                    </div>
+                    <p class="mb-0 fragment">Where \( p_t(\m{X})\) is the evolved density of the SDE at time \(t\).</p>
+                    <div class="r-hstack p-div fragment">so our deep learning challenge is&nbsp;<em>learning the
+                            score</em>,&nbsp;<div data-id="score-title">\(\score\)</div>
+                        .
+                    </div>
+                    </p>
+                </div>
+
+            </section> -->
+
+            <!-- <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>
+                        <div data-id="score-title">Learning the score</div>
+                    </h1>
+                </div>
+                <div class="r-vstack w-100 items-start">
+                    <p class=" fragment">Ideally, we would train the score function \(\m{s}\) to match the score
+                        directly.
+                    </p>
+                    <div class="w-100 fragment">\(\score = \underset{\m{s} \in
+                        L^2}{\operatorname{argmin}}\;
+                        \E_{\m{X}_t \sim p_t} \sbr{\norm{\m{s}(t, \m{X}_t) - \score}^2} \)
+                    </div>
+                    <p class=" fragment">Clearly ths won't work... <span>We can introduce a <em>conditional
+                                expectation</em>
+                            with the same
+                            minimiser:</span></p>
+                    <div class="w-100 fragment" data-id="dsm">\(\score = \underset{\m{s} \in
+                        L^2}{\operatorname{argmin}}\;
+                        \E_{\m{X}_t \sim p_t} \sbr{ \E_{\m{X}_0 | \m{X}_t \sim p_{0|t}} \sbr{\norm{\m{s}(t, \m{X}_t) -
+                        \nabla_{\m{X}} \log
+                        p_t(\m{X}_t | \m{X}_0)}}^2 } \)
+                    </div>
+                    <p class=" fragment">We can compute \(\nabla_{\m{X}} \log
+                        p_t(\m{X}_t | \m{X}_0)\)! But sampling \(p_{0|t}\) is hard.</p>
+                    <div class="w-100 fragment" data-id="dsm">\(\score= \underset{\m{s} \in
+                        L^2}{\operatorname{argmin}}\;
+                        \E_{\m{X}_0 \sim p_0}\E_{\m{X}_t | \m{X}_0 \sim p_{t|0}} \sbr{\norm{\m{s}(t, \m{X}_t) -
+                        \nabla_{\m{X}} \log
+                        p_t(\m{X}_t | \m{X}_0)}^2} \)
+                    </div>
+                    <p class=" fragment">Using usual probability rules we can flip the time indices!</p>
+
+            </section> -->
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>
+                        <div>Learning the score</div>
+                    </h1>
+                </div>
+                <div class="r-vstack w-100 items-start">
+                    <div class="w-100" data-id="dsm">\(\score= \underset{\m{s} \in
+                        L^2}{\operatorname{argmin}}\;
+                        \E_{\m{X}_0 \sim p_0}\E_{\m{X}_t | \m{X}_0 \sim p_{t|0}} \sbr{\norm{\m{s}(t, \m{X}_t) -
+                        \nabla_{\m{X}} \log
+                        p_{t|0}(\m{X}_t | \m{X}_0)}^2} \)
+                    </div>
+                    <p class="fragment">Why is this useful?</p>
+                    <ul>
+                        <li class="fragment">\(p_0\) is our data distribution - easy, fast to sample.</li>
+                        <li class="fragment">\(p_{t|0}\) is analytic for the OU process - easy, fast to sample.</li>
+                        <li class="fragment">A regression objective at time \(t\) only - no backprop through time
+                            needed.</li>
+                    </ul>
+                    <p class="fragment">Now we just integrate over the time variable with some weighting
+                        \(\textcolor{red}{\lambda(t)}\)
+                    </p>
+                    <div class="w-100 mt-3 fragment">\[\score = \underset{\m{s} \in
+                        L^2}{\operatorname{argmin}}\; \int \textcolor{red}{\lambda(t)}
+                        \E_{\m{X}_0 \sim p_0}\E_{\m{X}_t | \m{X}_0 \sim p_{t|0}} \sbr{\norm{\m{s}(t, \m{X}_t) -
+                        \nabla_{\m{X}} \log
+                        p_t(\m{X}_t | \m{X}_0)}^2} \d t \]
+                    </div>
+                    <!-- <p class="fragment">And with this we can learn the score, <em>simulation free!</em></p> -->
+                    <p class="fragment">N.B. This objective is <em>high variance</em>, and requires us to take a
+                        running
+                        average of the
+                        parameters at test time.</p>
+            </section>
+            <!-- 
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>
+                        <div data-id="score-title">Sampling the model</div>
+                    </h1>
+                    <h1>
+                        : via SDEs
+                    </h1>
+                </div>
+                <p>Given an SDE of the form</p>
+                <div class="w-100">\(\d \X = \drift \d t + \noise \brownian \)</div>
+                <p class="fragment" data-fragment-index="1">We can discretise this with steps of the form</p>
+                <div class="w-100 fragment" data-fragment-index="1">\( \m{X}_{k+1} = \m{X}_k + \gamma
+                    \textcolor{blue}{b(t(k), \m{X}_k)} +
+                    \sqrt{\gamma}
+                    \textcolor{red}{\sigma(t(k))} \m{Z}_{k+1} \quad\quad \m{Z}_{k+1} \sim \c{N}(0,
+                    \operatorname{Id})\)
+                </div>
+                <p class="fragment">You can get error bounds on the convergence to the true SDE, and you can use
+                    this to sample the
+                    forward and backwards SDE.</p>
+            </section> -->
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>
+                        The ODE connection
+                    </h1>
+                </div>
+                <p>Given an SDE of the form</p>
+                <div class="w-100">\(\d \X = \drift \d t + \noise \brownian \)</div>
+                <p class="fragment">The following ODE has the same time-marginals</p>
+                <div class="w-100 fragment">
+                    <div class="w-100">\(\d \X = \sbr{\drift - \frac{1}{2}\noise^2 \score }\d t \)</div>
+                </div>
+                <p class="fragment">With this ODE we can:</p>
+                <ul>
+                    <li class="fragment">Use <em>error-tolerant</em> ODE solvers.</li>
+                    <li class="fragment">Apply the same methods as <em>Continuous Normalising Flows</em> to get a
+                        <em>change in
+                            likelihood</em> for the flow, and therefore for the datapoint.
+                    </li>
+                </ul>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="dull">Geometry</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="dull">in</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Score-Based</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Generative
+                        Modelling</h1>
+                </div>
+                <p class="mb-0">How do score-based generative models work?</p>
+                <div class="r-vstack r-stretch items-center">
+                    <table style='border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;'>
+                        <tr class="no-border">
+                            <td class="no-border" style="vertical-align: middle;">
+                                <p style="vertical-align: middle;">A forward process...</p>
+                                <ul>
+                                    <li>Defined by an SDE</li>
+                                    <li>that converges nicely</li>
+                                    <li>with an analytic reversal</li>
+                                </ul>
+                            </td>
+                            <td class="no-border">
+                                <img class="my-0" src=" figures/perturb_vp.gif">
+                            </td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class=" no-border" style="vertical-align: middle;">
+                                <p>...which we then reverse</p>
+                                <ul>
+                                    <li>By learning the score</li>
+                                    <li>and solving the SDE</li>
+                                    <li>or solving the ODE.</li>
+                                </ul>
+                            </td>
+                            <td class="no-border" style="vertical-align: middle;">
+                                <img class="my-0" src="figures/denoise_vp.gif">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="w-100 scriptsize" style="opacity: 50%;">
+                                    GIFs reproduced from <a
+                                        href="https://yang-song.net/blog/2021/score/">https://yang-song.net/blog/2021/score/</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-stretch r-vstack w-100 items-center">
+                    <div class="w-100 d-table">
+                        <div class="d-table-row">
+                            <div class="d-table-head">Ingredient \ Space</div>
+                            <div class="d-table-head">Euclidean</div>
+                            <div class="d-table-head fragment" data-fragment-index="1">'Generic' Manifold</div>
+                            <div class="d-table-head fragment" data-fragment-index="2">Compact Manifold</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="FP">
+                                Forward Process
+                            </div>
+                            <div class="d-table-cell">OU</div>
+                            <div class="d-table-cell fragment" data-fragment-index="1" style=" vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell fragment" data-fragment-index="2" style=" vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Base distribution</div>
+                            <div class="d-table-cell">Gaussian</div>
+                            <div class="d-table-cell  fragment" data-fragment-index="1" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell  fragment" data-fragment-index="2" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Time reversal</div>
+                            <div class="d-table-cell">Cattiaux, 2021</div>
+                            <div class="d-table-cell  fragment" data-fragment-index="1" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell  fragment" data-fragment-index="2" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row o-20">
+                            <div class="d-table-cell">SDE Discretisation</div>
+                            <div class="d-table-cell">Eular-Maruyama</div>
+                            <div class="d-table-cell fragment" data-fragment-index="1" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell fragment" data-fragment-index="2" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Score-matching</div>
+                            <div class="d-table-cell">Denoising</div>
+                            <div class="d-table-cell fragment" data-fragment-index="1" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell fragment" data-fragment-index="2" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell"> Sample \(p_{t|0}(\m{X}_t|\m{X}_0)\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell fragment" data-fragment-index="1" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell fragment" data-fragment-index="2" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">\(\condscore\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell fragment" data-fragment-index="1" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell fragment" data-fragment-index="2" style="vertical-align: middle;">
+                                <img style="height: 0.8em;" class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">
+                        <div data-id="FP">Forward Process</div>
+                    </h1>
+
+                </div>
+                <div class="r-vstack items-start">
+                    <p class="mt-0 frgment">The typical forward SDE is in fact a specific form of <em>Langevin
+                            dynamics</em></p>
+                    <div class="w-100 r-hstack fragment"><span>\(\d \X = \langdrift \d t + \langnoise \brownian\)
+                        </span><span class="fragment fade-right" style="transition: all 1.5s ease;">\(\quad
+                            \xrightarrow[t\to \infty]{\text{converges
+                            to}}\quad
+                            p(\m{X}) \propto
+                            e^{-U(\m{X})}\)</span></div>
+                    <p class="fragment">Where you have \(U(\m{X}) = \norm{\m{X}}^2\), this gives a Gaussian</p>
+                    <p class="mt-0 fragment">As it turns out, Langevin dynamics still hold on most
+                        manifolds</p>
+                    <div class="w-100 r-hstack fragment"><span>\(\d \X = \langdrift \d t + \langnoise \brownian^\c{M}\)
+                        </span><span class="fragment fade-right animate-1-5">\(\quad
+                            \xrightarrow[t\to \infty]{\text{converges
+                            to}}\quad
+                            \frac{\d p}{\d \operatorname{Vol}_\c{M}} (\m{X}) \propto e^{-U(\m{X})}\)</span></div>
+                    <div class="columns w-100 mt-3">
+                        <div class="column r-vstack items-center fragment fade-up" style="overflow: visible;">
+                            <div class="caption mb-0 p-div small">Riemannian normal</div>
+                            <img class="my-0 w-50" style="height: 190px; object-fit: cover; object-position: bottom;"
+                                src="figures/sphere_riemannian_gaussian.png">
+                            <div class="w-100 footnotesize">\(U(\m{X}) = d_\c{M}(\m{X}, \mu)^2\)</div>
+                        </div>
+                        <div class="column r-vstack items-center fragment fade-up" data-id="wrap">
+                            <div class="caption mb-0 p-div small">Wrapped normal</div>
+                            <img class="my-0 w-50" style="height: 190px; object-fit: cover; object-position: bottom;"
+                                src="figures/sphere_riemannian_gaussian.png">
+                            <div class="w-100 footnotesize">\(U(\m{X}) = d_\c{M}(\m{X}, \mu)^2 + \log|D
+                                \exp_\mu^{-1}(\m{X})|\)
+                            </div>
+                        </div>
+                        <div class="column r-vstack items-center fragment fade-up" data-id="unif">
+                            <div class="caption mb-0 p-div small">
+                                <div>Uniform</div>
+                            </div>
+                            <img class="my-0 w-50" style="height: 190px; object-fit: cover; object-position: bottom;"
+                                src="figures/sphere_uniform.png">
+                            <div class="w-100 footnotesize">\(U(\m{X}) = 0\)</div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">Geometry</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">in</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Score-Based</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Generative
+                        Modelling</h1>
+                </div>
+                <div class="r-stretch r-vstack w-100 items-center">
+                    <div class="w-100 d-table">
+                        <div class="d-table-row">
+                            <div class="d-table-head">Ingredient \ Space</div>
+                            <div class="d-table-head">Euclidean</div>
+                            <div class="d-table-head">'Generic' Manifold</div>
+                            <div class="d-table-head">Compact Manifold</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="FP">
+                                Forward Process
+                            </div>
+                            <div class="d-table-cell">OU</div>
+                            <div class="d-table-cell">Langevin
+                                dynamics </div>
+                            <div class="d-table-cell">Langevin dynamics</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Base distribution</div>
+                            <div class="d-table-cell">Gaussian</div>
+                            <div class="d-table-cell" data-id="wrap">Wrapped normal</div>
+                            <div class="d-table-cell" data-id="unif">Uniform</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="time">Time reversal</div>
+                            <div class="d-table-cell">Cattiaux, 2021</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row o-20">
+                            <div class="d-table-cell">SDE Discretisation</div>
+                            <div class="d-table-cell">Eular-Maruyama</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Score-matching</div>
+                            <div class="d-table-cell">Denoising</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell"> Sample \(p_{t|0}(\m{X}_t|\m{X}_0)\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">\(\condscore\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">
+                        <div data-id="time">Time reversal</div>
+                    </h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">on</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Euclidean space</h1>
+                </div>
+                <div class="r-vstack">
+                    <div class="nice-box w-100" data-id="thm">
+                        <b>Theorem (Time-reversal of linear SDEs on \(\R^n\)):</b><br>
+                        Let \((\X)_{t\in[0,T]}\) with be
+                        associated with the SDE \(\d \X = \drift \d t + \noise \brownian\).<br>
+                        Then the time-reversal \((\Y)_{t \in [0,T]} = (\m{X}_{T-t})_{t\in [0,T]}\) is associated with
+                        <div class="mt-3 w-100 r-hstack">
+                            \( \d \Y = \sbr{\driftrev + \noiserev^2 \scorerev}\d t + \noiserev \brownian \)
+                        </div>
+                    </div>
+                    <p class=" mb-2 fragment">
+                        This result has been proved in a number of ways with increasingly modern tools, some
+                        examples:
+                    </p>
+                    <ul>
+                        <li class="fragment">Anderson 1982 (light on rigour, stochastic control point of view)</li>
+                        <li class="fragment">Haussmann and Pardoux 1986 (PDE point of view) </li>
+                        <li class="fragment">Cattiaux et al. 2021, Theorem 4.9 (rigorous Anderson)</li>
+                    </ul>
+                    <p class="fragment">but none of these results apply outside the Euclidean setting <span
+                            class="fragment fade-up">\(\rightarrow\) we will need
+                            to
+                            generalise this.</span></p>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">
+                        <div data-id="time">Time reversal</div>
+                    </h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">on</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Manifolds</h1>
+                </div>
+                <div class="r-vstack">
+                    <div class="nice-box w-100" data-id="thm">
+                        <div class="r-hstack justify-start w-100" style="font-weight: bold;">
+                            <div data-id="thm-name">Theorem 1</div>&nbsp;(Time-reversal of
+                            linear
+                            SDEs on manifolds)
+                        </div>
+
+                        Let \((\X)_{t\in[0,T]}\) with be
+                        associated with the SDE \(\d \X = \drift \d t + \noise \brownian^\c{M}\).<br>
+                        Then the time-reversal \((\Y)_{t \in [0,T]} = (\m{X}_{T-t})_{t\in [0,T]}\) is associated with
+                        <div class="mt-3 w-100 r-hstack fragment animate-1-5" data-fragment-index="9">
+                            \(\d \Y = \sbr{\driftrev + \noiserev^2 \scorerev}\d t + \noiserev \brownian^\c{M} \)
+                        </div>
+                    </div>
+                    <p class="w-100 fragment" data-fragment-index="1">Why is this hard? <span class="fragment"
+                            data-fragment-index="2">\(\rightarrow\) Geometry \(\cap\)
+                            Stochastic
+                            processes
+                            throws up technical difficulties with regularity of functions.</span></p>
+                    <p class="w-100 my-0 fragment" data-fragment-index="3">How do we solve this in the end?
+                    </p>
+                    <ul class="fragment" data-fragment-index="4">
+                        <li>Following the spirit of Cattieux's proof.</li>
+                        <li>State a simplified version of the theorem for Markov processes.</li>
+                        <li>Verify the regularity conditions by adapting Girsanov theory to manifolds, utilising the
+                            Nash embedding theorem.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+
+                <div class="r-stretch r-vstack w-100 items-center">
+                    <div class="w-100 d-table">
+                        <div class="d-table-row">
+                            <div class="d-table-head">Ingredient \ Space</div>
+                            <div class="d-table-head">Euclidean</div>
+                            <div class="d-table-head">'Generic' Manifold</div>
+                            <div class="d-table-head">Compact Manifold</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="FP">
+                                Forward Process
+                            </div>
+                            <div class="d-table-cell">OU</div>
+                            <div class="d-table-cell">Langevin
+                                dynamics </div>
+                            <div class="d-table-cell">Langevin dynamics</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Base distribution</div>
+                            <div class="d-table-cell">Gaussian</div>
+                            <div class="d-table-cell" data-id="wrap">Wrapped normal</div>
+                            <div class="d-table-cell" data-id="unif">Uniform</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="time">Time reversal</div>
+                            <div class="d-table-cell">Cattiaux, 2021</div>
+                            <div class="d-table-cell" data-id="thm-name">Theorem 1</div>
+                            <div class="d-table-cell">Theorem 1</div>
+
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">
+                                <div class="r-hstack items-start justify-start">
+                                    <div data-id="sde">SDE</div>&nbsp;
+                                    <div data-id="disc">Discretis</div>ation
+                                </div>
+                            </div>
+                            <div class="d-table-cell">Eular-Maruyama</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Score-matching</div>
+                            <div class="d-table-cell">Denoising</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell"> Sample \(p_{t|0}(\m{X}_t|\m{X}_0)\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">\(\condscore\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">
+                        <div data-id="disc">Discretis</div>
+                    </h1>
+                    <h1>ing</h1>
+                    <h1>&nbsp;</h1>
+                    <h1>
+                        <div data-id="sde">SDE</div>
+                    </h1>
+                    <h1>s&nbsp;</h1>
+                    <h1 class="">on</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Euclidean space</h1>
+                </div>
+                <div class="r-vstack w-100 justify-start items-start">
+                    <p>Given an SDE of the form</p>
+                    <div class="w-100">\(\d \X = \drift \d t + \noise \brownian \)</div>
+                    <p class="fragment" data-fragment-index="1">We would discretise this with steps of the form</p>
+                    <div class="w-100 fragment" data-fragment-index="1">\( \m{X}_{k+1} = \m{X}_k + \gamma
+                        \textcolor{blue}{b(t(k), \m{X}_k)} +
+                        \sqrt{\gamma}
+                        \textcolor{red}{\sigma(t(k))} \m{Z}_{k+1} \quad\quad \m{Z}_{k+1} \sim \c{N}(0,
+                        \operatorname{Id})\)
+                    </div>
+                    <p class="fragment">On manifolds we need to generalise this a little bit</p>
+                </div>
+            </section>
+            <section data-transition="none" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">
+                        <div data-id="disc">Discretis</div>
+                    </h1>
+                    <h1>ing</h1>
+                    <h1>&nbsp;</h1>
+                    <h1>
+                        <div data-id="sde">SDE</div>
+                    </h1>
+                    <h1>s&nbsp;</h1>
+                    <h1 class="">on</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Manifolds</h1>
+                </div>
+                <div class="r-vstack w-100 justify-start items-start">
+                    <p>Given an SDE of the form</p>
+                    <div class="w-100">\(\d \X = \drift \d t + \noise \brownian^\c{M} \)</div>
+                    <p>We would discretise this with steps of the form</p>
+
+                    <div class="w-100">\( \m{X}_{k+1} = \exp \del{\m{X}_k, \gamma \textcolor{blue}{b(t(k), \m{X}_k)} +
+                        \sqrt{\gamma}
+                        \textcolor{red}{\sigma(t(k))} \m{Z}_{k+1}} \quad\quad \m{Z}_{k+1} \sim \c{N}(0,
+                        \operatorname{Id})\)
+                    </div>
+            <div class="r-hstack w-100">
+                <div class="fragment" style="width:38%; z-index: -1;">
+                    <img class="img-fluid" style="margin-top: -0px;" src="figures/grw_step.png">
+                </div>
+                <div style="width: 10%"></div>
+                <div class="fragment" style="width:38%; z-index: -1;">
+                    <img class="img-fluid" style="margin-top: -0px;" src="figures/grw.gif">
+                </div>
+            </div>
+        </div>
+        </section>
+        <section data-auto-animate="" data-transition="none" hidden="" aria-hidden="true" class="future"
+            style="display: block;">
+            <div class="r-hstack justify-start h5">
+                <h1 class="">
+                    <div data-id="disc">Discretis</div>
+                </h1>
+                <h1>ing</h1>
+                <h1>&nbsp;</h1>
+                <h1>
+                    <div data-id="sde">SDE</div>
+                </h1>
+                <h1>s&nbsp;</h1>
+                <h1 class="">on</h1>
+                <h1>&nbsp;</h1>
+                <h1 class="">Manifolds</h1>
+            </div>
+            <div class="r-vstack w-100 justify-start items-start">
+                <p>Given an SDE of the form</p>
+                <div class="w-100">\(\d \X = \drift \d t + \noise \brownian^\c{M} \)</div>
+                <p>We would discretise this with steps of the form</p>
+
+                <div class="w-100">\( \m{X}_{k+1} = \exp \del{\m{X}_k, \gamma \textcolor{blue}{b(t(k), \m{X}_k)} +
+                    \sqrt{\gamma}
+                    \textcolor{red}{\sigma(t(k))} \m{Z}_{k+1}} \quad\quad \m{Z}_{k+1} \sim \c{N}(0,
+                    \operatorname{Id})\)
+                </div>
+                <div class=" p-div r-hstack">These are known as&nbsp;<em>
+                        <div data-id="grw">Geodesic Random Walks</div>
+                    </em>
+                </div>
+                <p class="fragment mt-0">These we well
+                    known, but we
+                    produce a new <em>error control</em> theorem for time-inhomogenous SDEs.</p>
+            </div>
+        </section> -->
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-stretch r-vstack w-100 items-center">
+                    <div class="w-100 d-table">
+                        <div class="d-table-row">
+                            <div class="d-table-head">Ingredient \ Space</div>
+                            <div class="d-table-head">Euclidean</div>
+                            <div class="d-table-head">'Generic' Manifold</div>
+                            <div class="d-table-head">Compact Manifold</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="FP">
+                                Forward Process
+                            </div>
+                            <div class="d-table-cell">OU</div>
+                            <div class="d-table-cell">Langevin
+                                dynamics </div>
+                            <div class="d-table-cell">Langevin dynamics</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Base distribution</div>
+                            <div class="d-table-cell">Gaussian</div>
+                            <div class="d-table-cell" data-id="wrap">Wrapped normal</div>
+                            <div class="d-table-cell" data-id="unif">Uniform</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="time">Time reversal</div>
+                            <div class="d-table-cell">Cattiaux, 2021</div>
+                            <div class="d-table-cell" data-id="thm-name">Theorem 1</div>
+                            <div class="d-table-cell">Theorem 1</div>
+
+                        </div>
+                        <div class="d-table-row o-20">
+                            <div class="d-table-cell">
+                                <div class="r-hstack items-start justify-start">
+                                    <div data-id="sde">SDE</div>&nbsp;
+                                    <div data-id="disc">Discretis</div>ation
+                                </div>
+                            </div>
+                            <div class="d-table-cell">Eular-Maruyama</div>
+                            <div class="d-table-cell">
+                                <div data-id="grw">GRW</div>
+                            </div>
+                            <div class="d-table-cell">
+                                GRW
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">
+                                <div data-id="sm">Score-matching</div>
+                            </div>
+                            <div class="d-table-cell">
+                                <div class="r-hstack">
+                                    <div data-id="denoise">Denoising</div>
+                                </div>
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell"> Sample \(p_{t|0}(\m{X}_t|\m{X}_0)\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">\(\condscore\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;"><img style="height: 0.8em;"
+                                    class="my-0" src="figures/cross.svg">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">
+                        <div data-id="denoise">Denoising</div>
+                    </h1>
+                    <h1>&nbsp;</h1>
+                    <h1>
+                        <div data-id="sm">Score-matching</div>
+                    </h1>
+                    <h1>s&nbsp;</h1>
+                    <h1 class="">
+                        <div>on Manifolds</div>
+                    </h1>
+                </div>
+                <div class="r-vstack justify-start items-start">
+                    <p class="fragment">Fortunately the denoising score-matching objective carries over with no trouble
+                        to manifolds.
+                        That is</p>
+                    <div class="w-100 fragment">\[\score = \underset{\m{s} \in
+                        L^2}{\operatorname{argmin}}\; \int \textcolor{red}{\lambda(t)}
+                        \E_{\m{X}_0 \sim p_0}\E_{\m{X}_t | \m{X}_0 \sim p_{t|0}} \sbr{\norm{\m{s}(t, \m{X}_t) -
+                        \nabla_{\m{X}} \log
+                        p_t(\m{X}_t | \m{X}_0)}^2} \d t \]
+                    </div>
+                    <p class="fragment">Our issue comes with evaluating \(\nabla_{\m{X}_t}\log
+                        p_{t|0}(\m{X}_t | \m{X}_0)\) and sampling \(p_{t|0}(\m{X}_t | \m{X}_0)\)</p>
+                    <ul>
+                        <li class="fragment">For the wrapped Gaussian SDE, we don't have a closed form for sampling or
+                            evaluation.</li>
+                        <li class="fragment">For Brownian motion SDE, this is the <em>heat kernel</em>
+                            <ul>
+                                <li class="fragment">
+                                    <div class="r-hstack items-start justify-start">
+                                        <!-- <div data-id="cond-score">\(\nabla_{\m{X}_t}\log
+                                            p_{t|0}(\m{X}_t | \m{X}_0)
+                                            \)</div>&nbsp;has&nbsp;
+                                        <div data-id="approx">approximat</div>ions. -->
+                                        <div data-id="approx-score">\(\nabla_{\m{X}_t}\log
+                                            p_{t|0}(\m{X}_t | \m{X}_0)
+                                            \) has approximations.</div>
+                                    </div>
+                                </li class="fragment">
+                                <li class="fragment">Sampling analytically is still difficult, but we can approximate
+                                    cheaply with discretisations.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <!-- <h1 class="">
+                        <div data-id="approx">Approximat</div>
+                    </h1>
+                    <h1>ing</h1>
+                    <h1>&nbsp;</h1>
+                    <h1>
+                        <div data-id="cond-score">\(\nabla_{\m{X}_t}\log
+                            p_{t|0}(\m{X}_t | \m{X}_0)
+                            \)</div>
+                    </h1> -->
+                    <h1>
+                        <div data-id="approx-score">Approximating \(\nabla_{\m{X}_t}\log
+                            p_{t|0}(\m{X}_t | \m{X}_0)
+                            \)</div>
+                    </h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">
+                        <div>on Manifolds</div>
+                    </h1>
+
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <h5 class="fragment"><b>Strum-Louiville (compact only)</b></h5>
+                        <p class="fragment">If we have the <em>eigenpairs</em> \((\lambda_j, \phi_j)\) of the
+                            <em>Laplace-Beltrami
+                                operator \( \Delta_\c{M}\)</em> then
+                        </p>
+                        <div class="w-100 fragment">
+                            <div class="w-100">
+                                \( p_{t|0}(\m{X}_t | \m{X}_0) =\)
+                            </div>
+                            <div class="w-100 mt-2">
+                                \(\sum_{j\in\N} e^{-\lambda_i t} \phi_j(\m{X}_0) \phi_j(\m{X}_t) \)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h5 class="fragment"><b>Varadhan</b></h5>
+                        <p class="fragment">Alternatively we have in the small time limit:</p>
+                        <div class="w-100 fragment">
+
+                            <div class="w-100">
+                                \( \lim_{t\to 0} \nabla_{\m{X}_t}\log
+                                p_{t|0}(\m{X}_t | \m{X}_0)\)
+                            </div>
+                            <div class="w-100 mt-2">
+                                \( = \exp^{-1}(\m{X}_t, \m{X}_0) / t\)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="img-fluid w-75 mt-5 fragment" src="figures/s2_heat_kernel_approximation.svg">
+            </section>
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">
+                        <div data-id="denoise">Implicit</div>
+                    </h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Score Matching</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">
+                        <div>on Manifolds&nbsp;</div>
+                    </h1>
+                    <h1>[Hyvärinen
+                        2005]</h1>
+                </div>
+                <p class="fragment">What if we can't approximate the conditional score?</p>
+                <div class="r-hstack justify-around">
+                    <div class="r-vstack w-75">
+                        <div class="w-100 fragment r-hstack items-start justify-start mb-3">
+                            \(\E_{\m{X}_t\sim p_t} \sbr{ \norm{\score - \m{s}(\m{X}_t)}^2 }\)
+                        </div>
+                        <div class="w-100 fragment r-hstack items-start justify-start mb-3">
+                            \(=\E_{\m{X}_t\sim
+                            p_t} \sbr{ \textcolor{red}{C}-2
+                            \innerprod{\score}{\m{s}(\m{X}_t)} + \norm{\m{s}(\m{X}_t)}^2} \)
+                        </div>
+                        <div class="w-100 fragment r-hstack items-start justify-start mb-3">
+                            \(=\E_{\m{X}_t\sim
+                            p_t} \sbr{ \textcolor{red}{C}-2
+                            \innerprod{\frac{\nabla_{\m{X}_t}\textcolor{green}{p_t(\m{X}_t)}}{\textcolor{green}{p_t(\m{X}_t)}}}{\m{s}(\m{X}_t)}
+                            +
+                            \norm{\m{s}(\m{X}_t)}^2}\)
+                        </div>
+                        <div class="w-100 fragment r-hstack items-start justify-start mb-3">
+                            \(=\E_{\m{X}_t\sim
+                            p_t} \sbr{ \textcolor{red}{C}+2
+                            \innerprod{\frac{\textcolor{green}{p_t(\m{X}_t)}}{\textcolor{green}{p_t(\m{X}_t)}}}{\operatorname{div}(\m{s})(\m{X}_t)}
+                            +
+                            \norm{\m{s}(\m{X}_t)}^2}\)
+                        </div>
+                        <div class="w-100 fragment r-hstack items-start justify-start mb-3">
+                            \(=\E_{\m{X}_t\sim
+                            p_t} \sbr{ \textcolor{red}{C} + 2
+                            \operatorname{div}{(\m{s})(\m{X}_t)} + \norm{\m{s}(\m{X}_t)}^2} \)
+                        </div>
+                        <div class="w-100 fragment r-hstack items-start justify-start mb-3">
+
+                            <div data-id="ISM">
+                                \(=\E_{\m{X}_0\sim
+                                p_0, \m{X}_t \sim p_{t|0}(\m{X}_t | \m{X}_0)} \sbr{ \textcolor{red}{C} + 2
+                                \operatorname{div}{(\m{s})(\m{X}_t)} + \norm{\m{s}(\m{X}_t)}^2}\)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1 class="">
+                        <div data-id="denoise">Implicit</div>
+                    </h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Score Matching</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">on</h1>
+                    <h1>&nbsp;</h1>
+                    <h1 class="">Manifolds [Hyvärinen
+                        2005]</h1>
+                </div>
+                <div class="w-100 r-hstack items-start justify-around mt-3">
+                    <div data-id="ISM">
+                        \(=\E_{\m{X}_0\sim
+                        p_0, \m{X}_t \sim p_{t|0}(\m{X}_t | \m{X}_0)} \sbr{ \textcolor{red}{C} + 2
+                        \operatorname{div}{(\m{s})(\m{X}_t)} + \norm{\m{s}(\m{X}_t)}^2}\)</div>
+                </div>
+                <p class="fragment">Using a divergence theorem for non-compact manifolds
+                    (e.g. Gaffney 1954) we can show an identical result. <span style="opacity: 20%;">with some
+                        regularity conditions...</span>
+                </p>
+                <p class="fragment">That is:</p>
+                <div class="w-100 fragment">
+                    \[ \score = \underset{\m{s}\in L^2}{\operatorname{argmin}} \int_0^T \textcolor{red}{\lambda(t)}
+                    \E_{\m{X}_0\sim
+                    p_0, \m{X}_t \sim p_{t|0}(\m{X}_t | \m{X}_0)} \sbr{2
+                    \operatorname{div}_\c{M}{(\m{s})(\m{X}_t)} + \norm{\m{s}(\m{X}_t)}^2_\c{M}} \d t \]
+                </div>
+                <p class="fragment">And the usual Hutchinson trace trick estimator can be used [Song et al. 2019].</p>
+
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden=" true" class="future" style="display: block;">
+                <div class="r-stretch r-vstack items-center">
+
+                    <table class="w-100 small">
+                        <tr class="">
+                            <th class="" style="border: 0 !important;">Loss</th>
+                            <th class="" style="border: 0 !important;">Approximation</th>
+                            <th class="" style="border: 0 !important;">Loss function</th>
+                            <th class="" style="border: 0 !important;" colspan="2">Requirements</th>
+                            <th class="" style="border: 0 !important;">Complexity</th>
+                        </tr>
+                        <tr class="midrule">
+                            <th class=""></th>
+                            <th class=""></th>
+                            <th class=""></th>
+                            <th class="">\(p_{t|0}\)</th>
+                            <th class="">\( \exp^{-1} \)</th>
+                            <th class=""></th>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" style="vertical-align: middle;">DSM</td>
+                            <td>None</td>
+                            <td>\(\E\sbr{\norm{\m{s}(\X ) - \nabla_{\m{X}_t}\log
+                                p_{t|0}(\m{X}_t | \m{X}_0)}^2}\)</td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/tick.svg">
+                            </td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/cross.svg">
+                            </td>
+                            <td>\(\c{O}(1)\)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">Truncation</td>
+                            <td>\(\E\sbr{\norm{\m{s}(\X ) - \nabla_{\m{X}_t}\log S_J(\m{X}_t, \m{X}_0)}^2}\)</td>
+                            <td>Expansion</td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/cross.svg">
+                            </td>
+                            <td>\(\c{O}(1)\)</td>
+                        </tr>
+                        <tr class="midrule">
+                            <td style="text-align: center;">Varhardan</td>
+                            <td>\(\E\sbr{\norm{\m{s}(\X ) - \exp_{\m{X}_t}^{-1}(\m{X}_s)/t}}\)</td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/cross.svg">
+                            </td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/tick.svg">
+                            </td>
+                            <td>\(\c{O}(1)\)</td>
+                        </tr>
+                        <!-- <tr class="midrule">
+                            <td>DSM</td>
+                            <td>Varhardan</td>
+                            <td>\(\E\sbr{\norm{\m{s}(\X ) - \nabla_{\m{X}_t}\log
+                                p_{t|0}(\m{X}_t | \m{X}_0)}^2}\)</td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/cross.svg">
+                            </td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/tick.svg">
+                            </td>
+                            <td>\(\c{O}(1)\)</td>
+                        </tr> -->
+                        <tr>
+                            <td rowspan="2" style="vertical-align: middle;">ISM</td>
+                            <td>Deterministic</td>
+                            <td>\(\E\sbr{\norm{\m{s}(t, \m{X}_t)}^2 + 2 \operatorname{div}(t, \cdot)(\m{X}_t)}\)</td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/cross.svg">
+                            </td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/cross.svg">
+                            </td>
+                            <td>\(\c{O}(d)\)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">Stochastic</td>
+                            <td>\(\E\sbr{\norm{\m{s}(t, \m{X}_t)}^2 + 2 \m{\varepsilon}^\top\operatorname{div}(t,
+                                \cdot)(\m{X}_t)\m{\varepsilon}}\)</td>
+
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/cross.svg">
+                            </td>
+                            <td>
+                                <img style="height: 0.8em;" class="my-0 img-fluid" src="figures/cross.svg">
+                            </td>
+                            <td>\(\c{O}(1)\)</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-stretch r-vstack w-100 items-center">
+                    <div class="w-100 d-table">
+                        <div class="d-table-row">
+                            <div class="d-table-head">Ingredient \ Space</div>
+                            <div class="d-table-head">Euclidean</div>
+                            <div class="d-table-head">'Generic' Manifold</div>
+                            <div class="d-table-head">Compact Manifold</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="FP">
+                                Forward Process
+                            </div>
+                            <div class="d-table-cell">OU</div>
+                            <div class="d-table-cell">Langevin
+                                dynamics </div>
+                            <div class="d-table-cell">Langevin dynamics</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Base distribution</div>
+                            <div class="d-table-cell">Gaussian</div>
+                            <div class="d-table-cell" data-id="wrap">Wrapped normal</div>
+                            <div class="d-table-cell" data-id="unif">Uniform</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell" data-id="time">Time reversal</div>
+                            <div class="d-table-cell">Cattiaux, 2021</div>
+                            <div class="d-table-cell" data-id="thm-name">Theorem 1</div>
+                            <div class="d-table-cell">Theorem 1</div>
+
+                        </div>
+                        <div class="d-table-row o-20">
+                            <div class="d-table-cell">
+                                <div class="r-hstack items-start justify-start">
+                                    <div data-id="sde">SDE</div>&nbsp;
+                                    <div data-id="disc">Discretis</div>ation
+                                </div>
+                            </div>
+                            <div class="d-table-cell">Eular-Maruyama</div>
+                            <div class="d-table-cell">
+                                <div data-id="grw">GRW</div>
+                            </div>
+                            <div class="d-table-cell">
+                                GRW
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">
+                                <div data-id="sm">Score-matching</div>
+                            </div>
+                            <div class="d-table-cell">
+                                <div class="r-hstack">
+                                    <div data-id="denoise">Denoising</div>/Implicit
+                                </div>
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;">
+                                <div class="r-hstack">
+                                    <div data-id="denoise">Denoising</div>/Implicit
+                                </div>
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;">
+                                <div class="r-hstack">
+                                    <div data-id="denoise">Denoising</div>/Implicit
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell"> Sample \(p_{t|0}(\m{X}_t|\m{X}_0)\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell" style="vertical-align: middle;">Discretise SDE
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;">Discretise SDE
+                            </div>
+                        </div>
+                        <div class="d-table-row items-start justify-start">
+                            <div class="d-table-cell">\(\condscore\)</div>
+                            <div class="d-table-cell">Analytic</div>
+                            <div class="d-table-cell"><img style=" height: 0.8em;" class="my-0" data-id="None"
+                                    src="figures/cross.svg">
+                                - Use ISM
+                            </div>
+                            <div class="d-table-cell" style="vertical-align: middle;">Strum-Louiville<br>& Varadhan
+                                Approx.
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-stretch r-vstack items-center">
+                    <h1 class="h2">Experimental Validation</h1>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>Baseline Methods</h1>
+                </div>
+                <div class="r-vstack w-100 mt-n4">
+                    <div class="w-100 items-start justify-start">
+                        <!-- <h1 class="fragment">Mixture of Kent distributions</h1> -->
+                        <div class="w-100 items-start justify-start">
+                            <h1 class="fragment">Riemannian Continuous Normalising Flows (RCNFs) <em>[Mathiue & Nickel
+                                    2020]</em></h1>
+                            <ul>
+                                <li class="fragment">Map a simple density under a vector field flow to a complex
+                                    density.
+                                </li>
+                                <li class="fragment">Compute the change in density via the log-det-Jacobian of this
+                                    flow.
+                                </li>
+                                <li class="fragment">Train with maximum likelihood.</li>
+                                <li class="fragment">Requires full forward/backward simulation to train.</li>
+                            </ul>
+                        </div>
+                        <div class="w-100 items-start justify-start">
+                            <h1 class="fragment">Moser Flows <em>[Rozen et al. 2020]</em></h1>
+                            <ul>
+                                <li class="fragment">Specify the <em>form</em> for the vector field flow as the linear
+                                    interpolation of the
+                                    start/end distributions.</li>
+                                <li class="fragment">&#128077 Exploit a property to get simulation-free likelihoods for
+                                    training.</li>
+                                <li class="fragment">&#128078 Require a regulariser that integrates over the whole
+                                    domain.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-100 r-hstack items-start justify-start">
+                            <h1 class="fragment">Wrapped SGMs</h1>
+                        </div>
+                    </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>Earth-Science Datasets</h1>
+                </div>
+                <div class="r-vstack w-100">
+
+                    <div class="r-hstack w-100 items-center justify-around fragment">
+                        <div class=" r-vstack" style="width: 20%">
+                            <img class="img-fluid w-100 my-0" m src="figures/earth_science/volcano.png">
+                            <div class="p-div caption mb=0 mt-2">Volcanoes</div>
+                        </div>
+                        <div class="r-vstack" style="width: 20%">
+                            <img class="img-fluid w-100 my-0" m src="figures/earth_science/earthquake.png">
+                            <div class="p-div caption mb=0 mt-2">Earthquakes</div>
+                        </div>
+                        <div class="r-vstack" style="width: 20%">
+                            <img class="img-fluid w-100 my-0" m src="figures/earth_science/flood.png">
+                            <div class="p-div caption mb=0 mt-2">Floods</div>
+                        </div>
+                        <div class="r-vstack" style="width: 20%">
+                            <img class="img-fluid w-100 my-0" m src="figures/earth_science/fire.png">
+                            <div class="p-div caption mb=0 mt-2">Fires</div>
+                        </div>
+                    </div>
+                    <div class="d-table w-100 small fragment">
+                        <div class=" d-table-row">
+                            <div class="d-table-head">Method</div>
+                            <div class="d-table-head">Volcanoes</div>
+                            <div class="d-table-head">Earthquakes</div>
+                            <div class="d-table-head">Floods</div>
+                            <div class="d-table-head">Fires</div>
+                        </div>
+                        <!-- <div class="d-table-row">
+                            <div class="d-table-cell">Mixture of Kent</div>
+                            <div class="d-table-cell">$-0.80_{\pm 0.47}$</div>
+                            <div class="d-table-cell">$0.33_{\pm 0.05}$</div>
+                            <div class="d-table-cell">$0.73_{\pm 0.07}$</div>
+                            <div class="d-table-cell">$-1.18_{\pm 0.06}$</div>
+                        </div> -->
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Riemannian CNF</div>
+                            <div class="d-table-cell">$\mathbf{-6.05_{\pm 0.61}}$</div>
+                            <div class="d-table-cell">${0.14_{\pm 0.23}}$</div>
+                            <div class="d-table-cell">${1.11_{\pm 0.19}}$</div>
+                            <div class="d-table-cell">$\mathbf{-0.80_{\pm 0.54}}$</div>
+                        </div>
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Moser Flow</div>
+                            <div class="d-table-cell">${-4.21_{\pm 0.17}}$</div>
+                            <div class="d-table-cell">$\mathbf{-0.16_{\pm 0.06}}$</div>
+                            <div class="d-table-cell">$\mathbf{0.57_{\pm 0.10}}$</div>
+                            <div class="d-table-cell">$\mathbf{-1.28_{\pm 0.05}}$</div>
+                        </div>
+                        <div class="d-table-row" style="background-color: #D4E6F1;">
+                            <div class="d-table-cell">Sterorgraphic SGM</div>
+                            <div class="d-table-cell">${-3.80_{\pm 0.27}}$</div>
+                            <div class="d-table-cell">$\mathbf{-0.19_{\pm 0.05}}$</div>
+                            <div class="d-table-cell">$\mathbf{0.59_{\pm 0.07}}$</div>
+                            <div class="d-table-cell">$\mathbf{-1.28_{\pm 0.12}}$</div>
+                        </div>
+                        <div class="d-table-row d-table-bottom-border" style="background-color: #D4E6F1;">
+                            <div class="d-table-cell">Riemannian SGM</div>
+                            <div class="d-table-cell">${-4.92_{\pm 0.25}}$</div>
+                            <div class="d-table-cell">$\mathbf{-0.19_{\pm 0.07}}$</div>
+                            <div class="d-table-cell">$\mathbf{0.45_{\pm 0.17}}$</div>
+                            <div class="d-table-cell">$\mathbf{-1.33_{\pm 0.06}}$</div>
+                        </div>
+                        <!-- <div class="d-table-row">
+                            <div class="d-table-cell w-100" style="padding: 0;">
+                                <hr class="w-100">
+                            </div>
+                            <div class="d-table-cell w-100" style="padding: 0;">
+                                <hr class="w-100">
+                            </div>
+                            <div class="d-table-cell w-100" style="padding: 0;">
+                                <hr class="w-100">
+                            </div>
+                            <div class="d-table-cell w-100" style="padding: 0;">
+                                <hr class="w-100">
+                            </div>
+                            <div class="d-table-cell w-100" style="padding: 0;">
+                                <hr class="w-100">
+                            </div>
+
+
+                        </div> -->
+                        <div class="d-table-row">
+                            <div class="d-table-cell">Dataset Size</div>
+                            <div class="d-table-cell">827</div>
+                            <div class="d-table-cell">6120</div>
+                            <div class="d-table-cell">4875</div>
+                            <div class="d-table-cell">12809</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>High-Dimension Tori</h1>
+                </div>
+                <p class="fragment mt-n4">Place a 2-mode mixture-of-Gaussian ditribution on \(\c{S}_1^n\).</p>
+                <div class="r-vstack w-100 fragment">
+                    <img class="img-fluid w-100" src="figures/high-dim.svg">
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>Synthetic $SO(3)$ data</h1>
+                </div>
+                <p class="fragment mt-n4">Place a M-mode mixture-of-Gaussian ditribution on \(SO(3)\).</p>
+
+                <div class="r-vstack w-100 fragment">
+                    <table class="w-100 small">
+                        <tr>
+                            <th rowspan="2" style="vertical-align: middle; text-align: left;">Method</th>
+                            <th colspan="2">$M=16$</th>
+                            <th colspan="2">$M=32$</th>
+                            <th colspan="2">$M=64$</th>
+                        </tr>
+                        <tr>
+                            <th>LL</th>
+                            <th>NFE ($\times 10^3$)</th>
+                            <th>LL</th>
+                            <th>NFE ($\times 10^3$)</th>
+                            <th>LL</th>
+                            <th>NFE ($\times 10^3$)</th>
+                        </tr>
+                        <tr>
+                            <td>Moser Flow</td>
+                            <td>$0.85_{\pm 0.03}$</td>
+                            <td>$2.3_{\pm0.5}$</td>
+                            <td>$0.17_{\pm0.03}$</td>
+                            <td>$2.3_{\pm0.9}$</td>
+                            <td>$-0.49_{\pm0.02}$</td>
+                            <td>$7.3_{\pm1.4}$</td>
+                        </tr>
+                        <tr>
+                            <td>Exp-wrapped SGMs</td>
+                            <td>$0.87_{\pm 0.04}$</td>
+                            <td>$0.5_{\pm0.1}$</td>
+                            <td>$0.16_{\pm0.03}$</td>
+                            <td>$0.5_{\pm0.0}$</td>
+                            <td>$-0.58_{\pm0.04}$</td>
+                            <td>$0.5_{\pm0.0}$</td>
+                        </tr>
+                        <tr>
+                            <td>RSGM</td>
+                            <td>$0.89_{\pm 0.03}$</td>
+                            <td>$0.1_{\pm0.0}$</td>
+                            <td>$0.20_{\pm0.03}$</td>
+                            <td>$0.1_{\pm0.0}$</td>
+                            <td>$-0.49_{\pm0.02}$</td>
+                            <td>$0.1_{\pm0.0}$</td>
+                        </tr>
+                    </table>
+                    <div class="w-100 mt-0 fragment">
+                        <img class="img-fluid w-100" src="figures/horizontal_vertical.svg">
+                    </div>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>Synthetic Hyperbolic Distributions</h1>
+                </div>
+                <div class="w-100 r-stretch r-hstack items-center justify-around mb-5 ">
+                    <div class=" r-vstack w-25">
+                        <img class="img-fluid w-100 my-0" m src="figures/hyperbolic/ref.png">
+                        <div class="p-div caption mb=0 mt-2">Target</div>
+                    </div>
+                    <div class=" r-vstack w-25">
+                        <img class="img-fluid w-100 my-0" m src="figures/hyperbolic/exp_wrap.png">
+                        <div class="p-div caption mb=0 mt-2">Exp-wrapped SGM</div>
+                    </div>
+                    <div class=" r-vstack w-25">
+                        <img class="img-fluid w-100 my-0" m src="figures/hyperbolic/rsgm.png">
+                        <div class="p-div caption mb=0 mt-2">RSGM</div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-hstack justify-start h5">
+                    <h1>Validation in Practise</h1>
+                </div>
+                <div class="w-100 columns" style="gap: 20px;
+                ">
+                    <div class="column">
+                        <div class="fragment" data-fragment-index="1">
+                            <h3 class="mt-0 mb-1">Protein Generation & Optimization</h3>
+                            <div class="container">
+                                <div class="citation">
+                                    <p>Protein Structure and Sequence Generation with Equivariant Denoising Diffusion
+                                        Probabilistic
+                                        Models</p>
+                                    <p>Namrata Anand, Tudor Achim</p>
+                                    <p>Arxiv preprint 2022</p>
+                                </div>
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\( \del{\R^3 \times \textcolor{darkred}{\SU(2)}
+                                                \times
+                                                \c{C}_{20}
+                                                \times \textcolor{darkred}{\SO(2)^4}}^n \)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="citation">
+                                    <p>Antigen-Specific Antibody Design and Optimization with Diffusion-Based Generative
+                                        Models
+                                        for
+                                        Protein Structures.</p>
+                                    <p>Shitong Luo, Yufeng Su, Xingang Peng, Sheng Wang, Jian Peng, Jianzhu Ma</p>
+                                    <p>NeurIPS 2022</p>
+                                </div>
+
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\({\textcolor{darkred}{\SE(3)^n}} \times
+                                                \c{C}_{20}\)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="citation">
+                                    <p>De novo design of protein structure and function with RFdiffusion</p>
+                                    <!-- <p>Joseph L. Watson, David Juergens, Nathaniel R. Bennett, Brian L. Trippe, Jason Yim, Helen
+                                E.
+                                Eisenach, Woody Ahern, Andrew J. Borst, Robert J. Ragotte, Lukas F. Milles, Basile I. M.
+                                Wicky,
+                                Nikita Hanikel, Samuel J. Pellock, Alexis Courbet, William Sheffler, Jue Wang, Preetham
+                                Venkatesh,
+                                Isaac Sappington, Susana Vázquez Torres, Anna Lauko, Valentin De Bortoli, Emile Mathieu,
+                                Sergey
+                                Ovchinnikov, Regina Barzilay, Tommi S. Jaakkola, Frank DiMaio, Minkyung Baek & David
+                                Baker</p> -->
+                                    <p style="font-size: 30% !important;">Joseph L. Watson, David Juergens, Nathaniel R.
+                                        Bennett, Brian L.
+                                        Trippe, Jason Yim, Helen
+                                        E.
+                                        Eisenach, Woody Ahern, Andrew J. Borst, Robert J. Ragotte, Lukas F. Milles,
+                                        Basile
+                                        I. M.
+                                        Wicky,
+                                        Nikita Hanikel, Samuel J. Pellock, Alexis Courbet, William Sheffler, Jue Wang,
+                                        Preetham
+                                        Venkatesh,
+                                        Isaac Sappington, Susana Vázquez Torres, Anna Lauko, Valentin De Bortoli, Emile
+                                        Mathieu,
+                                        Sergey
+                                        Ovchinnikov, Regina Barzilay, Tommi S. Jaakkola, Frank DiMaio, Minkyung Baek &
+                                        David
+                                        Baker</p>
+                                    <p>Nature volume 620, 2023</p>
+                                </div>
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\(\textcolor{darkred}{\SE(3)^n}\)</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="container">
+                                <div class="citation">
+                                    <p>SE(3) diffusion model with application to protein backbone generation</p>
+                                    <p>Jason Yim, Brian L. Trippe, Valentin De Bortoli, Emile Mathieu, Arnaud Doucet,
+                                        Regina
+                                        Barzilay,
+                                        Tommi S. Jaakkola</p>
+                                    <p>ICML 2023</p>
+                                </div>
+
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\(\textcolor{darkred}{\SE(3)^n}\)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="citation">
+                                    <p>Protein structure generation via folding diffusion.</p>
+                                    <p>Kevin Eric Wu, Kevin K Yang, Rianne van den Berg, James Zou, Alex Xijie Lu, Ava P
+                                        Amini
+                                    </p>
+                                    <p>ICLR 2023</p>
+                                </div>
+
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\(\textcolor{darkred}{\del{\SO(2)^6}^n}\)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- <div class="citation">
+                            <p>Denoising diffusion probabilistic models on so (3) for rotational alignment.</p>
+                            <p>Adam Leach, Sebastian M Schmon, Matteo T Degiacomi, and Chris G Willcocks.</p>
+                            <p>ICLR 2022 Workshop on Geometrical and Topological Representation Learning</p>
+                        </div> -->
+
+
+
+                    </div>
+                    <div class="column">
+                        <div class="fragment" data-fragment-index="2">
+                            <h3 class="mt-0 mb-1">Protein Docking</h3>
+                            <div class="container">
+
+                                <div class="citation">
+                                    <p>DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking</p>
+                                    <p>Gabriele Corso, Hannes Stärk, Bowen Jing, Regina Barzilay, Tommi S. Jaakkola</p>
+                                    <p>NeurIPS 2022 AI for Science, 2022</p>
+                                </div>
+
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\(\textcolor{darkred}{\SE(3)\times \SO(2)^n}\)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="citation">
+                                    <p>DiffDock-PP: Rigid Protein-Protein Docking with Diffusion Models</p>
+                                    <p>Mohamed Amine Ketata, Cedrik Laue, Ruslan Mammadov, Hannes Stark, Menghua Wu,
+                                        Gabriele
+                                        Corso,
+                                        Céline Marquet, Regina Barzilay, Tommi S. Jaakkola</p>
+                                    <p>ICLR 2023</p>
+                                </div>
+
+
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\(\textcolor{darkred}{\SE(3)}\)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fragment" data-fragment-index="3">
+                            <h3 class="mt-0 mb-1">Small Molecules</h3>
+
+                            <div class="container">
+                                <div class="citation">
+                                    <p>Hyperbolic Graph Diffusion Model for Molecule Generation</p>
+                                    <p>L Wen, X Wei</p>
+                                    <p>Arxiv preprint, 2023</p>
+                                </div>
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\(\textcolor{darkred}{\mathbb{H}^2}\)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="citation">
+                                    <p>Torsional Diffusion for Molecular Conformer Generation</p>
+                                    <p>Bowen Jing, Gabriele Corso, Jeffrey Chang, Regina Barzilay, Tommi Jaakkola</p>
+                                    <p>NeurIPS 2022</p>
+                                </div>
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\(\textcolor{darkred}{\SO(2)^n}\)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fragment" data-fragment-index="4">
+                            <h3 class="mt-0 mb-1">Crystal Structures</h3>
+
+                            <div class="container">
+                                <div class="citation">
+                                    <p>Crystal Structure Prediction by Joint Equivariant Diffusion on Lattices and
+                                        Fractional
+                                        Coordinates</p>
+                                    <p>Rui Jiao, Wenbing Huang, Peijia Lin, Jiaqi Han, Pin Chen, Yutong Lu, Yang Liu</p>
+                                    <p>ml4materials-iclr2023 Oral</p>
+                                </div>
+                                <div class="overlay fragment" data-fragment-index="5">
+                                    <div class="r-vstack items-center justify-around h-100">
+                                        <div class="r-hstack items-center justify-around w-100">
+                                            <div class="fade-border">\(\textcolor{darkred}{\del{\c{S}_1^3}^n}\)</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 
+                <p>This approch has been validated on bigger modelling tasks on e.g. proteins,
+                    molecules etc,
+                    see
+                    <em>SE (3) diffusion model with application to protein backbone generation</em> or <em>Toroidal
+                        Diffusion.</em>
+                </p> -->
+            </section>
+
+            <section data-auto-animate="" hidden="" aria-hidden="true" class="future" style="display: block;">
+                <div class="r-vstack w-100">
+                    <div class="r-hstack justify-start h5 w-100">
+                        <h1>Key Takeaways & My Contributions</h1>
+                    </div>
+                    <div class="r-vstack r-stretch w-100 justify-around">
+                        <div class="r-vstack w-100">
+                            <h1 class="h5 fragment">What did we achive?</h1>
+                            <ul style="list-style-type: '&#9989 ';">
+                                <li class="fragment">Extentsion of a powerful genereative
+                                    modelling
+                                    framework to generic manifolds.</li>
+                                <li class="fragment">State of the art results on common benchamrks and synthetic tasks.
+                                </li>
+                                <li class="fragment">Properly <em>scalable</em> generative models on
+                                    manifolds.</li>
+                                </li>
+                                <li class="fragment">Demonstrated <em>practical utility</em> on real tasks via other
+                                    works.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="r-vstack w-100">
+                            <h1 class="h5 fragment">What did I contribute?</h1>
+                            <ul>
+                                <li class="fragment">With Emile, initiated the project.</li>
+                                <li class="fragment">With Emile and Valentin, contributed solutions to the practical
+                                    issues faced.
+                                </li>
+                                <li class="fragment">With Emile, wrote the code and ran experiments.</li>
+                                <li class="fragment">The mathematical results are mostly due to Valentin, I proved some
+                                    regarding the ISM loss.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="h-100" data-auto-animate="" style="display: block;" data-fragment="-1">
+                <div class="r-hstack justify-start h5">
+                    <h1>Research Outline</h1>
+                </div>
+                <article>
+                    <div class="r-vstack w-100">
+                        <div class="r-hstack w-100 items-start">
+                            <div class="r-vstack w-25">
+                                <img class="img-fluid w-75 mb-n3 mt-n4" src="figures/sphere_w_dist.png">
+                                <h2 class="my-0 small">
+                                    <div data-id="title">Manifolds</div>
+                                </h2>
+                                <h3 class="my-0 footnotesize">
+                                    <div data-id="conf">Neurips 2022</div>
+                                </h3>
+                            </div>
+                            <div class="r-vstack w-25">
+                            </div>
+                            <div class="r-vstack w-25">
+                                <img class="img-fluid" style="width: 65%" src="figures/manifold_w_boundary_better.png">
+                                <h2 class="my-0 small text-nowrap"><em>Better</em> Manifolds with Boundary</h2>
+                                <h3 class="my-0 footnotesize">Arxiv 2023</h3>
+                            </div>
+                            <div class="r-vstack w-25">
+                            </div>
+                        </div>
+                        <img class="img-fluid w-100 mt-3 mb-1" style="max-width: 100% !important;"
+                            src="figures/timeline.svg">
+                        <div class="r-hstack w-100 items-start">
+                            <div class="r-vstack w-25">
+                            </div>
+                            <div class="r-vstack w-25">
+                                <img class="img-fluid" style="width: 65%" data-id="boundary_pic"
+                                    src="figures/manifold_w_boundary.png">
+                                <h2 class="my-0 small text-nowrap">Manifolds with Boundary</h2>
+                                <h3 class="my-0 footnotesize">TMLR 2023</h3>
+                            </div>
+                            <div class="r-vstack w-25">
+                            </div>
+                            <div class="r-vstack w-25">
+                                <div class="r-hstack w-100">
+                                    <img class="img-fluid w-50" src="figures/geometric_ndp.png">
+                                    <div class="mx-3" style="color: #002147;" data-id="amps">&</div>
+                                    <img class="img-fluid w-50" src="figures/field.svg">
+                                </div>
+                                <h2 class="my-0 small text-nowrap">Fields and Paths on Manifolds</h2>
+                                <h3 class="my-0 footnotesize">Arxiv 2023</h3>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="h-100" data-auto-animate="" style="display: block;" data-fragment="-1">
+                <div class="r-hstack justify-start h5">
+                    <h1>Research Outline</h1>
+                </div>
+                <div class="r-vstack h-75 justify-between">
+                    <!-- <div class="r-hstack w-100 items-end justify-start">
+                        <div class="r-vstack w-25">
+                            <img class="img-fluid w-75 mb-n3 mt-n4" src="figures/sphere_w_dist.png">
+                            <h2 class="my-0 small">
+                                <div data-id="title">Manifolds</div>
+                            </h2>
+                            <h3 class="my-0 footnotesize">
+                                <div data-id="conf">Neurips 2022</div>
+                            </h3>
+                        </div>
+                    </div> -->
+                    <div class="r-hstack w-100 items-end justify-around" style="height: 30%;">
+                        <div class="r-vstack h-100" style="width: 300px;">
+                            <img class="img-fluid h-75" data-id="boundary_pic" src=" figures/manifold_w_boundary.png">
+                            <h2 class="my-0 footnotesize text-nowrap">Manifolds with Boundary</h2>
+                            <h3 class="my-0 scriptsize">TMLR 2023</h3>
+                        </div>
+                        <div class="w-75 h-100 r-vstack items-center justify-around">
+                            <ul class="small fragment">
+                                <li>When our spaces have boundaries, normal SDEs will escape.</li>
+                                <li>Replace these with <em>log-barrier</em> and <em>reflected</em> SDEs.</li>
+                                <li>Investigate these and show how to make them work in practise.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="r-hstack w-100 items-end justify-around" style="height: 30%;">
+                        <div class="r-vstack h-100" style="width: 300px;">
+                            <img class="img-fluid h-75" src="figures/manifold_w_boundary_better.png">
+                            <h2 class="my-0 footnotesize text-nowrap"><em>Better</em> Manifolds with Boundary
+                            </h2>
+                            <h3 class="my-0 scriptsize">Arxiv 2023</h3>
+                        </div>
+                        <div class="w-75 h-100 r-vstack items-center justify-around">
+                            <ul class="small fragment">
+                                <li>Reflected SDEs are expensive to discretise in practise.</li>
+                                <li>Introduce a new sampling scheme based on Metropolis sampling.</li>
+                                <li>Show that this scheme works effectivly and very fast in practise.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="r-hstack w-100 items-end justify-around" style="height: 30%;">
+                        <div class="r-vstack h-100" style="width: 300px;">
+                            <div class="r-hstack w-100" style="height: 65%;">
+                                <img class="img-fluid h-100" src="figures/geometric_ndp.png">
+                                <div class="mx-3" style="color: #002147;" data-id="amps">&</div>
+                                <img class="img-fluid h-100" src="figures/field.svg">
+                            </div>
+                            <h2 class="my-0 footnotesize text-nowrap">Fields and Paths on Manifolds</h2>
+                            <h3 class="my-0 scriptsize">Arxiv 2023</h3>
+                        </div>
+                        <div class="w-75 h-100 r-vstack items-center justify-around">
+                            <ul class="small fragment">
+                                <li>What of we want to think not about distribution on manifolds but:</li>
+                                <ul>
+                                    <li>Distributions on <em>functions on manifolds</em>.</li>
+                                    <li>Distributions on <em>paths on manifolds</em>.</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="h-100" data-auto-animate="" style="display: block;" data-fragment="-1">
+                <div class="h-100 r-vstack items-center justify-around">
+                    <h1 class=" h1">
+                        <div>Thanks for listening!</div>
+                    </h1>
+                </div>
+            </section>
+            <section class="h-100" data-auto-animate="" style="display: block;" data-fragment="-1">
+                <div class="h-100 r-vstack items-center justify-start">
+                    <h1 class="h1 mb-1">
+                        <div>Thanks for listening!</div>
+                    </h1>
+                    <div class="r-hstack items-center w-100 mb-0">
+                        <h3 class="my-0 text-small-caps"><a href="https://mjhutchinson.info">mjhutchinson.info</a>
+                        </h3>
+                        <div style="width: 5%"></div>
+                        <h3 class="my-0 text-small-caps"><a href="https://twitter.com/MHutchinson141"><span
+                                    class="twitter"></span>@mhutchinson141</a></h3>
+                    </div>
+                    <div style="height: 50px;"></div>
+                    <div class="r-stretch columns w-75">
+                        <div class="column">
+
+                            <p class="my-3 footnotesize" data-fragment-index="0">
+                                Riemannian
+                                Score-Based Generative Modelling.<br>V. D. Bortoli*, E. Mathieu*, M.
+                                Hutchinson*, J.
+                                Thornton, Y. W. Teh, A.
+                                Doucet.
+                                <em>Neurips</em>, 2022.
+                            </p>
+                            <p class="my-3 footnotesize" data-fragment-index="0">
+                                Diffusion Models
+                                for
+                                Constrained Domains.<br>N. Fishman, L. Klarner, V. D. Bortoli, E. Mathieu, M.
+                                Hutchinson.
+                                <em>TMLR</em>, 2023.
+                            </p>
+                            <p class="my-3 footnotesize" data-fragment-index="0">
+                                Metropolis Sampling
+                                for
+                                Constrained Diffusion Models
+                                .<br>N. Fishman, L. Klarner, E. Mathieu, M. Hutchinson, V. D. Bortoli.
+                                <em>arXiv:2307.05439</em>, 2023.
+                            </p>
+                            <p class="mt-3 mb-0 footnotesize" data-fragment-index="0">
+                                Geometric Neural Diffusion Processes.<br>E. Mathieu*, V. Dutordoir*, M.
+                                Hutchinson*,
+                                V.
+                                D.
+                                Bortoli, Y. W. Teh, R. Turner.
+
+                                <em>arXiv:2307.05431</em>, 2023.
+                            </p>
+                        </div>
+                        <!-- <div class="column"></div> -->
+                    </div>
+                    <div style="height: 50px;"></div>
+                    <div class="w-100"><img src="figures/oxweb-logo-rect.svg"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js">
+    </script>
+    <script src="plugin/notes/notes.js"></script>
+    <!-- <script src="plugin/markdown/markdown.js"></script> -->
+    <!-- <script src="plugin/highlight/highlight.js"></script> -->
+    <script src="plugin/math/math.js"></script>
+
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        document.addEventListener("DOMContentLoaded", () => {
+            // Reveal.initialize({
+            //     hash: true,
+            //     center: false,
+            //     width: 1280,
+            //     height: 800,
+            //     maxScale: 5.0,
+            //     slideNumber: true,
+            //     transition: "fade",
+            //     keyboard: { 27: null },
+            //     pdfSeparateFragments: false
+            // });
+            Reveal.on('pdf-ready', () =>
+                document.querySelectorAll("section[data-no-print]").forEach(e => e.parentNode.remove())
+            );
+            document.querySelectorAll("*[data-class]").forEach(e => e.dataset.class.split(" ").forEach(c => e.classList.add(c)));
+        });
+        Reveal.initialize({
+            hash: true,
+            center: false,
+            width: 1280,
+            height: 800,
+            maxScale: 5.0,
+            slideNumber: true,
+            transition: "fade",
+            pdfSeparateFragments: !0,
+            pdfSeparateFragments: false,
+            katex: {
+                verison: 'latest',
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false },
+                    { left: "\\[", right: "\\]", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                ],
+                trust: true,
+                strict: false,
+                macros: {
+                    "\\P": "\\mathbb{P}",
+                    "\\E": "\\mathbb{E}",
+                    "\\Cov": "\\operatorname{Cov}",
+                    "\\N": "\\mathbb{N}",
+                    "\\Z": "\\mathbb{Z}",
+                    "\\Q": "\\mathbb{Q}",
+                    "\\R": "\\mathbb{R}",
+                    "\\C": "\\mathbb{C}",
+                    "\\eps": "\\varepsilon",
+                    "\\given": "\\mid",
+                    "\\d": "{\\operatorname{d}}",
+                    "\\v": "\\boldsymbol{#1}",
+                    "\\m": "\\mathbf{#1}",
+                    "\\f": "\\operatorname{#1}",
+                    "\\s": "\\mathscr{#1}",
+                    "\\c": "\\mathcal{#1}",
+                    "\\bb": "\\mathbb{#1}",
+                    "\\del": "\\left({#1}\\right)",
+                    "\\sbr": "\\left[{#1}\\right]",
+                    "\\cbr": "\\left\\{ {#1} \\right\\}",
+                    "\\x": "\\times",
+                    "\\t": "\\mathbin{\\text{#1}}",
+                    "\\norm": "\\left\\Vert{#1}\\right\\Vert",
+                    "\\innerprod": "\\left\\langle{#1},{#2}\\right\\rangle",
+                    "\\pd": "\\partial",
+                    "\\o": "\\circ",
+                    "\\.": "\\cdot",
+                    "\\h": "\\widehat{#1}",
+                    "\\~": "\\sim",
+                    "\\ubr": "\\underset{\\mathclap{#2}}{\\undergroup{#1}}",
+                    "\\drift": "\\textcolor{blue}{b(t, \\X)}",
+                    "\\noise": "\\textcolor{red}{\\sigma(t)}",
+                    "\\score": "\\textcolor{orange}{\\nabla_{\\m{X}}\\log p_t(\\X)}",
+                    "\\driftrev": "\\textcolor{blue}{-b(T-t, \\Y)}",
+                    "\\noiserev": "\\textcolor{red}{\\sigma(T-t)}",
+                    "\\scorerev": "\\textcolor{orange}{\\nabla_{\\m{X}}\\log p_{T-t}(\\Y)}",
+                    "\\langdrift": "\\textcolor{blue}{-\\nabla_{\\m{X}}U(\\X)}",
+                    "\\langnoise": "\\textcolor{red}{\\sqrt{2}}",
+                    "\\brownian": "\\d \\m{B}_t",
+                    "\\condscore": "{\\nabla_{\\m{X}_t}\\log p_{t|0}(\\m{X}_t | \\m{X}_0)}",
+
+                    "\\X": "\\m{X}_t",
+                    "\\Y": "\\m{Y}_t",
+                    "\\SE": "\\operatorname{SE}",
+                    "\\SU": "\\operatorname{SU}",
+                    "\\SO": "\\operatorname{SO}",
+                }
+            },
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealNotes, RevealMath.KaTeX]
+        });
+    </script>
+</body>
+
+</html>
